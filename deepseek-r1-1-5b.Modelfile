@@ -1,0 +1,17 @@
+
+# ollama create config-deepseek-r1-1-5b -f deepseek-r1-1-5b.Modelfile
+# ollama create bb-config-deepseek-r1-1-5b -f deepseek-r1-1-5b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM deepseek-r1:1.5b
+# I'm an AI assistant that processes information and helps users by performing various tasks
+# Author: DeepSeek AI
+# Size on disk: 
+# Size running: 8.9 GB
+#  architecture        qwen2     
+#  parameters          1.8B      
+#  context length      131072    
+#  embedding length    1536      
+#  quantization        Q4_K_M    
+
+PARAMETER temperature 0.6
+PARAMETER num_ctx 131072
+PARAMETER top_p 0.95

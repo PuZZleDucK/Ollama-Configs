@@ -1,5 +1,5 @@
 
-# command-r7b:7b
+[x] # command-r7b:7b
 - Slug: `config-command-r7b-7b`
 - Author: Cohere
 - max_new_tokens: 100
@@ -9,7 +9,7 @@
 - context_length: 128k
   - Optional: top_k=40, top_p=0.95, min_p=0.05, typical_p=1.0, temperature=0.0
 
-# command-r7b:7b-12-2024-fp16
+[ ] # command-r7b:7b-12-2024-fp16
 - Slug: `config-command-r7b-7b-12-2024-fp16`
 - Author: Cohere
 - temperature: 0.3
@@ -17,7 +17,7 @@
 - context_length: 128k
   - Optional: top_k=40, top_p=0.95, min_p=0.05, typical_p=1.0, temperature=0.0
 
-# command-r7b-ctx-32k:7b
+[ ] # command-r7b-ctx-32k:7b # clean up once new config built
 - Slug: `config-command-r7b-ctx-32k-7b`
 - Author: Cohere
 - temperature: 0.3
@@ -25,7 +25,7 @@
 - context_length: 32k
   - Optional: top_k=40, top_p=0.95, min_p=0.05, typical_p=1.0, temperature=0.0
 
-# deepcoder:14b
+[x] # deepcoder:14b
 - Slug: `config-deepcoder-14b`
 - Author: Agentica
 - temperature: 0.6
@@ -35,7 +35,7 @@
 - context_length: 32k
   - Optional: top_k=50, temperature=0.2, repetition_penalty=1.03, max_new_tokens=256, stop=["\nUser:", "<|endoftext|>", "</s>"]
 
-# deepcoder-ctx-32k:14b
+[ ] # deepcoder-ctx-32k:14b - remove
 - Slug: `config-deepcoder-ctx-32k-14b`
 - Author: Agentica
 - temperature: 0.6
@@ -45,7 +45,7 @@
 - context_length: 32k
   - Optional: top_k=50, temperature=0.2, repetition_penalty=1.03, max_new_tokens=256, stop=["\nUser:", "<|endoftext|>", "</s>"]
 
-# deepcoder:1.5b
+[x] # deepcoder:1.5b
 - Slug: `config-deepcoder-1-5b`
 - Author: Agentica
 - temperature: 0.6
@@ -53,7 +53,7 @@
 - context_length: 32k
   - Optional: top_k=50, repetition_penalty=1.03, max_new_tokens=256
 
-# deepseek-r1:1.5b
+[x] # deepseek-r1:1.5b
 - Slug: `config-deepseek-r1-1-5b`
 - Author: DeepSeek AI
 - temperature: 0.6

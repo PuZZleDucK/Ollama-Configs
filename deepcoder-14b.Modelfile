@@ -1,0 +1,26 @@
+# ollama create config-deepcoder-14b -f deepcoder-14b.Modelfile
+# ollama create bb-config-deepcoder-14b -f deepcoder-14b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM deepcoder:14b
+# Hi! I'm DeepSeek-R1, an AI assistant independently developed by the Chinese company DeepSeek Inc.
+# Author: Agentica
+# Size on disk: 9.0 GB
+# Size running: 19 GB
+#  architecture        qwen2     
+#  parameters          14.8B     
+#  context length      131072    
+#  embedding length    5120      
+#  quantization        Q4_K_M    
+
+
+
+PARAMETER temperature 0.6
+PARAMETER top_p 0.95
+PARAMETER num_predict 64000
+PARAMETER num_ctx 32768
+PARAMETER top_k 50
+PARAMETER stop "\nUser:"
+PARAMETER stop "<|endoftext|>"
+PARAMETER stop "</s>"
+PARAMETER repeat_penalty 1.03
+PARAMETER min_p 0.05
+PARAMETER typical_p 1.0

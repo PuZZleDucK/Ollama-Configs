@@ -1,18 +1,15 @@
-# ollama create config-llama3 -f llama3.Modelfile
-# ollama create bb-config-llama3 -f llama3.Modelfile --system "$(cat optional_system_prompt.md)"
-FROM llama3
-# what llm model are you
-# Author: 
-# Size on disk: 
-# Size running: 
-# ollama show
+# ollama create config-command-r7b-7b -f config-command-r7b-7b.Modelfile
+# ollama create bb-config-command-r7b-7b -f config-command-r7b-7b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM command-r7b:7b
+#  I am Command, a sophisticated large language model developed by Cohere
+# Size on disk: 5.1 GB on disk
+# Size running: 7.5 GB running
+#  architecture        cohere2    
+#  parameters          8.0B       
+#  context length      8192       ???
+#  embedding length    4096       
+#  quantization        Q4_K_M
 
-#  max_new_tokens or max_tokens => num_predict # default 128
-#  context_length => num_ctx
-#  do_sample -> remove
-#  repetition_penalty -> repeat_penalty
-#  128k => 131072 - 32k => 32768
-#  PARAMETER stop -> one per line
 PARAMETER num_predict 100
 PARAMETER temperature 0.3
 PARAMETER stop "<|START_OF_TURN_TOKEN|>"
@@ -23,15 +20,6 @@ PARAMETER top_k 40
 PARAMETER top_p 0.95
 PARAMETER min_p 0.05
 PARAMETER typical_p 1.0
-PARAMETER repeat_penalty 1.03
-PARAMETER repeat_last_n
-
-# temperature	Randomness / creativity	0 – 1.2 (0 = deterministic)
-# top_p	Nucleus sampling cutoff	0.7 – 0.95
-# top_k	Consider only top‑k tokens	20 – 100
-# repeat_penalty	Discourage repetition	1.1 – 1.5
-# num_predict	Max tokens to generate	128 (‑1 = unlimited)
-# num_ctx
 
 #  SYSTEM You are a concise coding assistant.
 #  TEMPLATE """{{ if .System }}{{ .System }} {{ end }}<!-- original --> {{ .Prompt }}"""
@@ -40,5 +28,3 @@ PARAMETER repeat_last_n
 #    #  • {{ .Messages }} / {{ range .Messages }} – an array of all prior chat turns (only when you call /api/chat)
 #    #  • {{ .Response }} – marker indicating where the model’s answer should start (everything after it is thrown away during generation).
 #    #  Wrap sections with {{ if .System }} … {{ end }} or {{ if .Prompt }} so the block disappears when the variable is empty.
-
-
