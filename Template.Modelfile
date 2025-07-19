@@ -1,0 +1,27 @@
+# ollama create llama3-ctx32k -f Template.Modelfile
+# ollama create llama3-system -f Template.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM llama3
+
+PARAMETER num_ctx     32768   # 32k context
+PARAMETER temperature 0.25
+PARAMETER top_p       0.9
+PARAMETER top_k       40
+PARAMETER stop "<"
+
+# temperature	Randomness / creativity	0 – 1.2 (0 = deterministic)
+# top_p	Nucleus sampling cutoff	0.7 – 0.95
+# top_k	Consider only top‑k tokens	20 – 100
+# repeat_penalty	Discourage repetition	1.1 – 1.5
+# num_predict	Max tokens to generate	128 (‑1 = unlimited)
+# num_ctx
+
+SYSTEM You are a concise coding assistant.
+
+TEMPLATE """{{ if .System }}{{ .System }} {{ end }}<!-- original --> {{ .Prompt }}"""
+#  • {{ .System }} – the system prompt (may be empty)
+#  • {{ .Prompt }} – the user prompt (single‑turn generate) or the last user message (chat)
+#  • {{ .Messages }} / {{ range .Messages }} – an array of all prior chat turns (only when you call /api/chat)
+#  • {{ .Response }} – marker indicating where the model’s answer should start (everything after it is thrown away during generation).
+#  Wrap sections with {{ if .System }} … {{ end }} or {{ if .Prompt }} so the block disappears when the variable is empty.
+
+

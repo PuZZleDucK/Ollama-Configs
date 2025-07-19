@@ -1,0 +1,747 @@
+
+# command-r7b:7b
+- max_new_tokens: 100
+- temperature: 0.3
+- do_sample: true
+- stop: ["<|START_OF_TURN_TOKEN|>", "<|END_OF_TURN_TOKEN|>", "<|END_RESPONSE|>"]
+- context_length: 128k
+
+# command-r7b:7b-12-2024-fp16
+- temperature: 0.3
+- stop: ["<|START_OF_TURN_TOKEN|>", "<|END_OF_TURN_TOKEN|>", "<|END_RESPONSE|>"]
+- context_length: 128k
+
+# command-r7b-ctx-32k:7b
+- temperature: 0.3
+- stop: ["<|START_OF_TURN_TOKEN|>", "<|END_OF_TURN_TOKEN|>", "<|END_RESPONSE|>"]
+- context_length: 32k
+
+# deepcoder:14b
+- temperature: 0.6
+- top_p: 0.95
+- max_tokens: 64000
+- avoid_system_prompt: true
+- context_length: 32k
+
+# deepcoder-ctx-32k:14b
+- temperature: 0.6
+- top_p: 0.95
+- max_tokens: 64000
+- avoid_system_prompt: true
+- context_length: 32k
+
+# deepcoder:1.5b
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# deepseek-r1:1.5b
+- temperature: 0.6
+- avoid_system_prompt: true
+- context_length: 128k
+
+# deepseek-r1:7b
+- temperature: 0.6
+- avoid_system_prompt: true
+- context_length: 128k
+
+# deepseek-r1:8b
+- temperature: 0.6
+- avoid_system_prompt: true
+- context_length: 128k
+
+# deepseek-r1:14b
+- temperature: 0.6
+- avoid_system_prompt: true
+- context_length: 128k
+
+# deepseek-r1:32b
+- temperature: 0.6
+- avoid_system_prompt: true
+- context_length: 128k
+
+# deepseek-r1-ctx-32k:14b
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# deepseek-r1-ctx-32k:7b
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# deepseek-r1-ctx-32k:8b
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# deepseek-r1-ctx-32k:32b
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# deepseek-r1-distill-qwen-1.5b
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# deepseek-r1-distill-qwen-7b
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# deepseek-r1-distill-qwen-14b
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# deepseek-r1-distill-qwen-32b
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# qwen2.5:0.5b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen2.5:1.5b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen2.5:3b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen2.5:7b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen2.5:14b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen2.5:32b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen2.5-coder:0.5b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen2.5-coder:1.5b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen2.5-coder:3b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen2.5-coder:7b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen2.5-coder:14b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen2.5-coder:32b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen2.5vl:3b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen2.5vl:7b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen2.5vl:32b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen2.5vl-3b-ctx-32k
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 32k
+
+# qwen2.5vl-7b-ctx-32k
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 32k
+
+# qwen2.5-coder-ctx-32k:32b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 32k
+
+# qwen3:0.6b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen3:1.7b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen3:4b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen3:8b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen3:14b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen3:32b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwen3-ctx-32k:32b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 32k
+
+# qwen3:latest
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 128k
+
+# qwq:latest
+- temperature: 0.7
+- top_p: 0.85
+- context_length: 32k
+
+# qwq-ctx-32k:latest
+- temperature: 0.7
+- top_p: 0.85
+- context_length: 32k
+
+# smollm:135m
+- temperature: 0.6
+- top_p: 0.9
+- max_new_tokens: 512
+
+# smollm:360m
+- temperature: 0.6
+- top_p: 0.9
+- max_new_tokens: 512
+
+# smollm:1.7b
+- temperature: 0.6
+- top_p: 0.9
+- max_new_tokens: 512
+
+# wizard-vicuna-uncensored:7b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 2k
+- memory_requirement: ≥8GB
+
+# wizard-vicuna-uncensored:13b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 2k
+- memory_requirement: ≥16GB
+
+# wizard-vicuna-uncensored:30b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 2k
+- memory_requirement: ≥32GB
+
+# eris_primev3-vision-7b-gguf
+- temperature: 0.7
+- top_p: 0.9
+- max_new_tokens: 512
+
+# exaone-deep:2.4b
+- temperature: 0.6
+- top_p: 0.95
+
+# exaone-deep:7.8b
+- temperature: 0.6
+- top_p: 0.95
+
+# exaone-deep:32b
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 128k
+
+# exaone-deep-ctx-32k:7.8b
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# falcon3:7b
+- temperature: 0.7
+- top_p: 0.9
+- max_new_tokens: 4096
+
+# falcon3:10b
+- temperature: 0.7
+- top_p: 0.9
+- max_new_tokens: 4096
+
+# falcon3-ctx-32k:10b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 32k
+
+# gemma3:1b
+- temperature: 1.0
+- top_p: 0.95
+- top_k: 64
+- context_length: 32k
+
+# gemma3:4b
+- temperature: 1.0
+- top_p: 0.95
+- top_k: 64
+- context_length: 128k
+
+# gemma3:12b
+- temperature: 1.0
+- top_p: 0.95
+- top_k: 64
+- context_length: 128k
+
+# gemma3:27b
+- temperature: 1.0
+- top_p: 0.95
+- top_k: 64
+- context_length: 128k
+
+# gemma3-ctx-32k:4b
+- temperature: 1.0
+- top_p: 0.95
+- top_k: 64
+- context_length: 32k
+
+# gemma3-ctx-32k:12b
+- temperature: 1.0
+- top_p: 0.95
+- top_k: 64
+- context_length: 32k
+
+# gemma3-ctx-32k:27b
+- temperature: 1.0
+- top_p: 0.95
+- top_k: 64
+- context_length: 32k
+
+# gemma3n:e2b
+- temperature: 1.0
+- top_p: 0.95
+- top_k: 64
+
+# gemma3n:e4b
+- temperature: 1.0
+- top_p: 0.95
+- top_k: 64
+
+# gemma3n-ctx-32k:e4b
+- temperature: 1.0
+- top_p: 0.95
+- top_k: 64
+- context_length: 32k
+
+# gemma-the-writer-n-restless-quill-10b-uncensored-gguf-q8_0
+- temperature: 1.0
+- top_p: 0.95
+- top_k: 64
+
+# hf.co/bartowski/phi-3.5-mini-instruct_uncensored-gguf:f16
+- temperature: 0.7
+- top_p: 0.9
+- repetition_penalty: 1.05
+- max_new_tokens: 1024
+
+# hf.co/davidau/gemma-the-writer-n-restless-quill-10b-uncensored-gguf:q8_0
+- temperature: 1.0
+- top_p: 0.95
+- top_k: 64
+
+# hf.co/davidau/l3.2-rogue-creative-instruct-uncensored-abliterated-7b-gguf:q8_0
+- temperature: 0.7
+- top_p: 0.9
+
+# hf.co/davidau/llama-3.2-8x3b-moe-dark-champion-instruct-uncensored-abliterated-18.4b-gguf:q2_k
+- temperature: 0.6
+- top_p: 0.95
+
+# hf.co/davidau/llama-3.2-8x3b-moe-dark-champion-instruct-uncensored-abliterated-18.4b-gguf:q6_k
+- temperature: 0.6
+- top_p: 0.95
+
+# hf.co/davidau/llama-3.2-8x3b-moe-dark-champion-instruct-uncensored-abliterated-18.4b-gguf:q8_0
+- temperature: 0.6
+- top_p: 0.95
+
+# hf.co/devsdocode/llama-3-8b-uncensored-q4_k_m-gguf:q4_k_m
+- temperature: 0.6
+- top_p: 0.9
+
+# hf.co/lewdiculous/eris_primev3-vision-7b-gguf-iq-imatrix:latest
+- temperature: 0.7
+- top_p: 0.9
+- max_new_tokens: 512
+
+# hf.co/mlabonne/daredevil-8b-abliterated-gguf:latest
+- temperature: 0.7
+- top_p: 0.9
+
+# hf.co/mlabonne/gemma-3-27b-it-abliterated-gguf:q4_k_m
+- temperature: 1.0
+- top_p: 0.95
+- top_k: 64
+
+# hf.co/mradermacher/deepseek-r1-distill-qwen-32b-uncensored-gguf:q4_k_m
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# hf.co/mradermacher/deepseek-r1-distill-qwen-32b-uncensored-gguf:q8_0
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# hf.co/mradermacher/josiefied-deepseek-r1-0528-qwen3-8b-abliterated-v1-gguf:q8_0
+- temperature: 0.6
+- top_p: 0.95
+
+# hf.co/mradermacher/magistral-small-2506-abliterated-i1-gguf:q2_k
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 32k
+
+# hf.co/mradermacher/nyan_chaos-vision-7b-gguf:q8_0
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 32k
+
+# hf.co/mungert/josiefied-qwen3-8b-abliterated-v1-gguf:latest
+- temperature: 0.7
+- top_p: 0.9
+
+# hf.co/orenguteng/llama-3.1-8b-lexi-uncensored-v2-gguf:latest
+- temperature: 0.6
+- top_p: 0.95
+
+# hf.co/thebloke/wizard-vicuna-13b-uncensored-gguf:q4_k_m
+- temperature: 0.7
+- top_p: 0.9
+
+# hf.co/thebloke/wizard-vicuna-13b-uncensored-gguf:q8_0
+- temperature: 0.7
+- top_p: 0.9
+
+# josiefied-deepseek-r1-0528-qwen3-8b-abliterated-v1-gguf-ctx-32k:q8_0
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# josiefied-qwen3-8b-abliterated-v1-gguf-ctx-32k:latest
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 32k
+
+# llama-3.1-8b-lexi-uncensored-v2-gguf-ctx-32k:latest
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# llama-3-2-8x3b-moe-dark-champion-instruct-18-4b-gguf-ctx-32k:q8_0
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# llama3.2-vision:11b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 128k
+
+# llama3.2-vision-11b-ctx-32k
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 32k
+
+# llama3.3:70b
+- temperature: 0.6
+- top_p: 0.95
+- max_new_tokens: 32768
+
+# LLama-3-8b-uncensored-q4_k_m-gguf-ctx-32k:q4_k_m
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# llava:7b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 8k
+
+# llava:13b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 8k
+
+# llava:34b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 8k
+
+# llava-ctx-32k:13b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 32k
+
+# magistral:24b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 32k
+
+# magistral-ctx-32k:24b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 32k
+
+# magistral-small-2506-abliterated-i1-gguf-ctx-32k:q2_k
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 32k
+
+# minicpm-v:latest
+- temperature: 0.7
+- top_p: 0.9
+- max_new_tokens: 512
+
+# mistral-small3.1:24b
+- temperature: 0.7
+- top_p: 0.9
+- max_new_tokens: 4096
+
+# mistral-small3.1-ctx-32k:24b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 32k
+
+# mistral-small3.2:24b
+- temperature: 0.7
+- top_p: 0.9
+- max_new_tokens: 4096
+
+# mistral-small3.2:latest
+- temperature: 0.7
+- top_p: 0.9
+- max_new_tokens: 4096
+
+# Nyan_Chaos-Vision-7B-GGUF-ctx-32k:q8_0
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 32k
+
+# nyan_chaos-vision-7b-gguf:q8_0
+- temperature: 0.7
+- top_p: 0.9
+
+# opencoder:1.5b
+- temperature: 0.7
+- top_p: 0.95
+- context_length: 32k
+
+# opencoder:8b
+- temperature: 0.7
+- top_p: 0.95
+- context_length: 32k
+
+# opencoder-ctx-32k:8b
+- temperature: 0.7
+- top_p: 0.95
+- context_length: 32k
+
+# phi4-mini-reasoning:3.8b
+- temperature: 0.8
+- top_p: 0.95
+- do_sample: true
+- max_new_tokens: 4096
+
+# phi4-reasoning:plus
+- temperature: 0.8
+- top_p: 0.95
+- do_sample: true
+- max_new_tokens: 4096
+
+# phi4-reasoning-plus-ctx-32k
+- temperature: 0.8
+- top_p: 0.95
+- do_sample: true
+- max_new_tokens: 4096
+- context_length: 32k
+
+# qwen2.5vl-ctx-32k:32b
+- temperature: 0.7
+- top_p: 0.8
+- repetition_penalty: 1.05
+- context_length: 32k
+
+# yi-coder:1.5b
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# yi-coder:9b
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# yi-coder-ctx-32k:9b
+- temperature: 0.6
+- top_p: 0.95
+- context_length: 32k
+
+# devstral:24b
+- temperature: 0.7
+- top_p: 0.95
+- max_tokens: 40960
+- context_length: 40k
+
+# devstral-ctx-32k:24b
+- temperature: 0.7
+- top_p: 0.95
+- max_tokens: 40960
+- context_length: 32k
+
+# devstral:latest
+- temperature: 0.7
+- top_p: 0.95
+- max_tokens: 40960
+- context_length: 40k
+
+# dolphin3:8b
+- temperature: 0.6
+- top_p: 0.9
+- do_sample: true
+- context_length: 8k
+
+# granite3.2-vision:2b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 128k
+
+# granite3.2-vision-2b-ctx-32k:latest
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 32k
+
+# granite3.3:2b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 128k
+
+# granite3.3:8b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 128k
+
+# granite3.3-ctx-32k:8b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 32k
+
+# granite3-dense:2b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 128k
+
+# granite3-dense:8b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 128k
+
+# granite3-moe:1b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 128k
+
+# granite3-moe:3b
+- temperature: 0.7
+- top_p: 0.9
+- context_length: 128k
+
+# hermes3:3b
+- temperature: 0.6
+- top_p: 0.9
+- do_sample: true
+- context_length: 8k
+
+# hermes3:8b
+- temperature: 0.8
+- top_p: 0.9
+- repetition_penalty: 1.1
+- do_sample: true
+- max_new_tokens: 2500
+- context_length: 8k
+
+# hermes3-ctx-32k:8b
+- temperature: 0.8
+- top_p: 0.9
+- repetition_penalty: 1.1
+- do_sample: true
+- max_new_tokens: 2500
+- context_length: 32k
+
+# Eris_PrimeV3-Vision-7B-GGUF-IQ-Imatrix-ctx-32k:latest
+- temperature: 0.7
+- top_p: 0.9
+- max_new_tokens: 512
+- context_length: 32k
