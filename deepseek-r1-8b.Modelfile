@@ -1,0 +1,17 @@
+
+# ollama create config-deepseek-r1-8b -f deepseek-r1-8b.Modelfile
+# ollama create bb-config-deepseek-r1-8b -f deepseek-r1-8b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM deepseek-r1:8b
+# I'm based on a large language model developed by **DeepSeek**, called **Deepseek-R1**
+# Author: DeepSeek AI
+# Size on disk: 5.2 GB
+# Size running: 24 GB
+#  architecture        qwen3     
+#  parameters          8.2B      
+#  context length      131072    
+#  embedding length    4096      
+#  quantization        Q4_K_M    
+
+PARAMETER temperature 0.6
+PARAMETER num_ctx 131072
+PARAMETER top_p 0.95

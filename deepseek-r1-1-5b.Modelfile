@@ -4,7 +4,7 @@
 FROM deepseek-r1:1.5b
 # I'm an AI assistant that processes information and helps users by performing various tasks
 # Author: DeepSeek AI
-# Size on disk: 
+# Size on disk: 1.1 GB
 # Size running: 8.9 GB
 #  architecture        qwen2     
 #  parameters          1.8B      

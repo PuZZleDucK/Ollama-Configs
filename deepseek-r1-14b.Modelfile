@@ -1,0 +1,17 @@
+
+# ollama create config-deepseek-r1-14b -f deepseek-r1-14b.Modelfile
+# ollama create bb-config-deepseek-r1-14b -f deepseek-r1-14b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM deepseek-r1:14b
+# Hi! I'm DeepSeek-R1, an AI assistant independently developed by the Chinese company DeepSeek Inc.
+# Author: DeepSeek AI
+# Size on disk: 
+# Size running: 34 GB
+#  architecture        qwen2     
+#  parameters          14.8B     
+#  context length      131072    
+#  embedding length    5120      
+#  quantization        Q4_K_M    
+
+PARAMETER temperature 0.6
+PARAMETER num_ctx 131072
+PARAMETER top_p 0.95

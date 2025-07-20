@@ -1,11 +1,11 @@
 # ollama create config-llama3 -f llama3.Modelfile
 # ollama create bb-config-llama3 -f llama3.Modelfile --system "$(cat optional_system_prompt.md)"
 FROM llama3
-# what llm model are you
+# 
 # Author: 
 # Size on disk: 
 # Size running: 
-# ollama show
+# ollama show config-llama3 && ollama run config-llama3 "what llm model are you"
 
 #  max_new_tokens or max_tokens => num_predict # default 128
 #  context_length => num_ctx
@@ -25,6 +25,7 @@ PARAMETER min_p 0.05
 PARAMETER typical_p 1.0
 PARAMETER repeat_penalty 1.03
 PARAMETER repeat_last_n
+PARAMETER presence_penalty 1.5
 
 # temperature	Randomness / creativity	0 – 1.2 (0 = deterministic)
 # top_p	Nucleus sampling cutoff	0.7 – 0.95

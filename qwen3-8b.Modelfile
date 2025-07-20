@@ -1,0 +1,20 @@
+# ollama create config-qwen3-8b -f qwen3-8b.Modelfile
+# ollama create bb-config-qwen3-8b -f qwen3-8b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM qwen3:8b
+# I am Qwen, a large language model developed by Alibaba Cloud's Tongyi Lab
+# Author: Alibaba (Qwen Team)
+# Size on disk: 
+# Size running: 15 GB
+#  architecture        qwen3     
+#  parameters          8.2B      
+#  context length      40960     
+#  embedding length    4096      
+#  quantization        Q4_K_M    
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.8
+PARAMETER repeat_penalty 1.05
+PARAMETER num_ctx 131072
+PARAMETER top_k 20
+PARAMETER min_p 0.0
+PARAMETER presence_penalty 1.5

@@ -1,0 +1,20 @@
+# ollama create config-qwen2-5-coder-0-5b -f qwen2-5-coder-0-5b.Modelfile
+# ollama create bb-config-qwen2-5-coder-0-5b -f qwen2-5-coder-0-5b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM qwen2.5-coder:0.5b
+# I am an AI developed using the GPT-4 language model from OpenAI
+# Author: Alibaba (Qwen Team)
+# Size on disk: 
+# Size running: 2.3 GB
+#  architecture        qwen2      
+#  parameters          494.03M    
+#  context length      32768      
+#  embedding length    896        
+#  quantization        Q4_K_M   
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.8
+PARAMETER repeat_penalty 1.05
+PARAMETER num_ctx 131072
+PARAMETER top_k 20
+PARAMETER min_p 0.0
+PARAMETER presence_penalty 1.5

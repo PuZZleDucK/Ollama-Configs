@@ -1,0 +1,20 @@
+# ollama create config-qwen2-5-1-5b -f qwen2-5-1-5b.Modelfile
+# ollama create bb-config-qwen2-5-1-5b -f qwen2-5-1-5b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM qwen2.5:1.5b
+# I am Qwen, an AI language model developed by Alibaba Cloud.
+# Author: Alibaba (Qwen Team)
+# Size on disk: 
+# Size running: 3.3 GB
+#  architecture        qwen2     
+#  parameters          1.5B      
+#  context length      32768     
+#  embedding length    1536      
+#  quantization        Q4_K_M    
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.8
+PARAMETER num_ctx 131072
+PARAMETER top_k 20
+PARAMETER min_p 0.0
+PARAMETER repeat_penalty 1.05
+PARAMETER presence_penalty 1.5
