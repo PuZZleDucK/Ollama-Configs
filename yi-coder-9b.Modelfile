@@ -1,0 +1,19 @@
+# ollama create config-yi-coder-9b -f yi-coder-9b.Modelfile
+# ollama create bb-config-yi-coder-9b -f yi-coder-9b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM yi-coder:9b
+# I am a language model provided by OpenAI and trained on a diverse range of text from the internet. My name is GPT-3
+# Author: 01.AI
+# Size on disk: 
+# Size running: 11 GB
+#  architecture        llama     
+#  parameters          8.8B      
+#  context length      131072    
+#  embedding length    4096      
+#  quantization        Q4_0      
+
+# roo:
+#  could not respond with roo formatting
+
+PARAMETER temperature 0.6
+PARAMETER top_p 0.95
+PARAMETER num_ctx 32768

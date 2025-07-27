@@ -1,0 +1,16 @@
+# ollama create config-llava-7b -f llava-7b.Modelfile
+# ollama create bb-config-llava-7b -f llava-7b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM llava:7b
+# I am an AI language model, specifically a 768-dimensional transformer
+# Author: LLaVA Team
+# Size on disk: 4.7 GB
+# Size running: 8.5 GB
+#  architecture        llama    
+#  parameters          7.2B     
+#  context length      32768    
+#  embedding length    4096     
+#  quantization        Q4_0     
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 8000

@@ -1,0 +1,17 @@
+# ollama create config-minicpm-v -f minicpm-v.Modelfile
+# ollama create bb-config-minicpm-v -f minicpm-v.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM minicpm-v:latest
+# I am a large language model trained by OpenAI. My specific name is GPT-3
+# Author: OpenBMB
+# Size on disk: 
+# Size running: 9.7 GB
+#  architecture        qwen2    
+#  parameters          7.6B     
+#  context length      32768    
+#  embedding length    3584     
+#  quantization        Q4_0     
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 32768
+PARAMETER num_predict 512

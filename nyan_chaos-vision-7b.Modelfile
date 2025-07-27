@@ -1,0 +1,19 @@
+# ollama create config-nyan_chaos-vision-7b -f nyan_chaos-vision-7b.Modelfile
+# ollama create bb-config-nyan_chaos-vision-7b -f nyan_chaos-vision-7b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/mradermacher/Nyan_Chaos-Vision-7B-GGUF:Q8_0
+# I'm using the OpenAI GPT-4 model
+# Author: Mradermacher
+# Size on disk: 7.7 GB
+# Size running: 15 GB
+#  architecture        llama    
+#  parameters          7.2B     
+#  context length      32768    
+#  embedding length    4096     
+#  quantization        Q8_0     
+
+# roo:
+# could not handle agents
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 32768

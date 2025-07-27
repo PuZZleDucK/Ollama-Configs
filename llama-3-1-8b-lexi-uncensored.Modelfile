@@ -1,0 +1,22 @@
+# ollama create config-llama-3-1-8b-lexi-uncensored -f llama-3-1-8b-lexi-uncensored.Modelfile
+# ollama create bb-config-llama-3-1-8b-lexi-uncensored -f llama-3-1-8b-lexi-uncensored.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/Orenguteng/Llama-3.1-8B-Lexi-Uncensored-V2-GGUF:latest
+# I’m a large language model.
+# Author: Orenguteng
+# Size on disk: 16 GB
+# Size running: 22 GB
+#  architecture        llama     
+#  parameters          8.0B      
+#  context length      131072    
+#  embedding length    4096      
+#  quantization        F16       
+
+# Roo:
+#  can call agents but misuses todo lists.
+#  writes a simple plan
+#  tried to implement key capture in the cli, fixated on current state of keyboard
+
+
+PARAMETER temperature 0.3
+PARAMETER top_p 0.95
+PARAMETER num_ctx 32768

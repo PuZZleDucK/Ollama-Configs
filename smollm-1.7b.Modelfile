@@ -1,20 +1,18 @@
+# ollama create config-smollm-1-7b -f smollm-1.7b.Modelfile
+# ollama create bb-config-smollm-1-7b -f smollm-1.7b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM smollm:1.7b
+# LLM stands for Large Language Model, which refers to a type of artificial neural network
+# Author: Hugging Face Smol Models Team
+# Size on disk: 
+# Size running: 2.6 GB
+#  architecture        llama    
+#  parameters          1.7B     
+#  context length      2048     
+#  embedding length    2048     
+#  quantization        Q4_0     
 
-#  smollm:1.7b
-
-#  {
-#      "stop": [
-#          "<|im_start|>",
-#          "<|im_end|>"
-#      ],
-#      "temperature": 0.2,
-#      "top_p": 0.9
-#  }
-
-#  template
-#  {{ if .System }}<|im_start|>system
-#  {{ .System }}<|im_end|>
-#  {{ end }}{{ if .Prompt }}<|im_start|>user
-#  {{ .Prompt }}<|im_end|>
-#  {{ end }}<|im_start|>assistant
-#  {{ .Response }}<|im_end|>
-
+PARAMETER temperature 0.6
+PARAMETER top_p 0.9
+PARAMETER num_predict 512
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "<|im_end|>"

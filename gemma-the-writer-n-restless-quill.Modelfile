@@ -1,0 +1,24 @@
+# ollama create config-gemma-the-writer-n-restless-quill -f gemma-the-writer-n-restless-quill.Modelfile
+# ollama create bb-config-gemma-the-writer-n-restless-quill -f gemma-the-writer-n-restless-quill.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/DavidAU/Gemma-The-Writer-N-Restless-Quill-10B-Uncensored-GGUF:Q8_0
+# While I can perform many semelhantes tasks to other open-weights LLMs like GPT-Alike models
+# Author: Bartowski
+# Size on disk: 
+# Size running: 15 GB
+# ollama show config-gemma-the-writer-n-restless-quill && ollama run config-gemma-the-writer-n-restless-quill "what llm model are you"
+#  architecture        gemma2    
+#  parameters          10.0B     
+#  context length      8192      
+#  embedding length    3584      
+#  quantization        Q8_0      
+
+# Roo:
+#  difficulty calling agents
+#  could not call agents
+
+PARAMETER temperature 1.0
+PARAMETER top_p 0.95
+PARAMETER top_k 64
+PARAMETER min_p 0.0
+PARAMETER repeat_penalty 1.0
+PARAMETER num_ctx 32768

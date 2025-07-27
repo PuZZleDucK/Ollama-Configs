@@ -1,0 +1,17 @@
+# ollama create config-dolphin3-8b -f dolphin3-8b.Modelfile
+# ollama create bb-config-dolphin3-8b -f dolphin3-8b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM dolphin3:8b
+# I am an instance of the Language Model 2 (LM2) architecture
+# Author: Eric Hartford
+# Size on disk: 
+# Size running: 8.5 GB
+# ollama show config-dolphin3-8b && ollama run config-dolphin3-8b "what llm model are you"
+#  architecture        llama     
+#  parameters          8.0B      
+#  context length      131072    
+#  embedding length    4096      
+#  quantization        Q4_K_M    
+
+PARAMETER temperature 0.6
+PARAMETER top_p 0.9
+PARAMETER num_ctx 8000

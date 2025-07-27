@@ -1,0 +1,21 @@
+# ollama create config-eris_primev3-vision-7b -f eris_primev3-vision-7b.Modelfile
+# ollama create bb-config-eris_primev3-vision-7b -f eris_primev3-vision-7b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/Lewdiculous/Eris_PrimeV3-Vision-7B-GGUF-IQ-Imatrix:latest
+# I'm sorry, but I don't have a specific LLM in mind at the moment
+# Author: Lewdiculous
+# Size on disk: 
+# Size running: 16 GB
+#  architecture        llama    
+#  parameters          7.2B     
+#  context length      32768    
+#  embedding length    4096     
+#  quantization        F16      
+
+# Roo:
+#  could not call agents
+
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_predict 512
+#    - Optional: top_p=1, top_k=0, top_a=0, tfs=1, epsilon_cutoff=0, eta_cutoff=0, typical_p=1, min_p=0.1, repetition_penalty=1

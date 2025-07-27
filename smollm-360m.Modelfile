@@ -1,22 +1,19 @@
+# ollama create config-smollm-360m -f smollm-360m.Modelfile
+# ollama create bb-config-smollm-360m -f smollm-360m.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM smollm:360m
+# I'm happy to help! LLM stands for Large Language Model
+# Author: Hugging Face Smol Models Team
+# Size on disk: 
+# Size running: 
+# ollama show config-smollm-360m && ollama run config-smollm-360m "what llm model are you"
+#  architecture        llama      
+#  parameters          361.82M    
+#  context length      2048       
+#  embedding length    960        
+#  quantization        Q4_0       
 
-#  smollm:360m
-
-
-
-#  {
-#      "stop": [
-#          "<|im_start|>",
-#          "<|im_end|>"
-#      ],
-#      "temperature": 0.2,
-#      "top_p": 0.9
-#  }
-
-#  template
-#  {{ if .System }}<|im_start|>system
-#  {{ .System }}<|im_end|>
-#  {{ end }}{{ if .Prompt }}<|im_start|>user
-#  {{ .Prompt }}<|im_end|>
-#  {{ end }}<|im_start|>assistant
-#  {{ .Response }}<|im_end|>
-
+PARAMETER temperature 0.6
+PARAMETER top_p 0.9
+PARAMETER num_predict 512
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "<|im_end|>"

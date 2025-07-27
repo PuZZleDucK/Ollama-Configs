@@ -1,0 +1,16 @@
+# ollama create config-dark-champion-instruct-uncensored-q8_0 -f dark-champion-instruct-uncensored-q8_0.Modelfile
+# ollama create bb-config-dark-champion-instruct-uncensored-q8_0 -f dark-champion-instruct-uncensored-q8_0.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/DavidAU/Llama-3.2-8X3B-MOE-Dark-Champion-Instruct-uncensored-abliterated-18.4B-GGUF:Q8_0
+# 
+# Author: DavidAU
+# Size on disk: 
+# Size running: 25 GB
+#  architecture        llama     
+#  parameters          18.4B     
+#  context length      131072    
+#  embedding length    3072      
+#  quantization        Q8_0      
+
+PARAMETER temperature 0.3
+PARAMETER top_p 0.95
+PARAMETER num_ctx 32768

@@ -1,0 +1,21 @@
+# ollama create config-magistral-small-2506-abliterated -f magistral-small-2506-abliterated.Modelfile
+# ollama create bb-config-magistral-small-2506-abliterated -f magistral-small-2506-abliterated.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/mradermacher/Magistral-Small-2506-abliterated-i1-GGUF:Q2_K
+# I'm a large language model developed by Mistral AI. My name is **Cotica**
+# Author: Mradermacher
+# Size on disk: 8.9 GB
+# Size running: 17 GB
+#  architecture        llama    
+#  parameters          23.6B    
+#  context length      40960    
+#  embedding length    5120     
+#  quantization        Q2_K     
+
+# Roo:
+#  can call agents and wrote plan to file... asks a lot of questions
+#  subtask loop
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 32768
+PARAMETER num_predict 40960

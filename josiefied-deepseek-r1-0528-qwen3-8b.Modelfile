@@ -1,0 +1,25 @@
+# ollama create config-josiefied-deepseek-r1-0528-qwen3-8b -f josiefied-deepseek-r1-0528-qwen3-8b.Modelfile
+# ollama create bb-config-josiefied-deepseek-r1-0528-qwen3-8b -f josiefied-deepseek-r1-0528-qwen3-8b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/mradermacher/Josiefied-DeepSeek-R1-0528-Qwen3-8B-abliterated-v1-GGUF:Q8_0
+# I am an AI assistant powered by **DeepSeek-R1**, a large multimodal model developed by DeepSeek, based in China
+# Author: Mradermacher
+# Size on disk: 8.7 GB
+# Size running: 16 GB
+#  architecture        qwen3     
+#  parameters          8.2B      
+#  context length      131072    
+#  embedding length    4096      
+#  quantization        Q8_0      
+
+# Roo:
+#  thought a lot brfore starting to delegate agents or work
+#  reviewed files without prompting
+#  but never completed architechture step
+#  inconsistant tool use
+
+PARAMETER temperature 0.6
+PARAMETER top_p 0.95
+PARAMETER num_ctx 32768
+PARAMETER top_k 20
+PARAMETER min_p 0.0
+PARAMETER presence_penalty 1.5

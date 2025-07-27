@@ -1,22 +1,17 @@
+# ollama create config-smollm-135m -f smollm-135m.Modelfile
+# ollama create bb-config-smollm-135m -f smollm-135m.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM smollm:135m
+# A LSTM (Long Short-Term Memory) model is a type of recurrent neural network (RNN)
+# Author: 
+# Size on disk: 
+# Size running: 770 MB
+#  architecture        llama      
+#  parameters          134.52M    
+#  context length      2048       
+#  embedding length    576        
+#  quantization        Q4_0       
 
-#  smollm:135m
-
-
-
-#  {
-#      "stop": [
-#          "<|im_start|>",
-#          "<|im_end|>"
-#      ],
-#      "temperature": 0.2,
-#      "top_p": 0.9
-#  }
-
-#  template
-#  {{ if .System }}<|im_start|>system
-#  {{ .System }}<|im_end|>
-#  {{ end }}{{ if .Prompt }}<|im_start|>user
-#  {{ .Prompt }}<|im_end|>
-#  {{ end }}<|im_start|>assistant
-#  {{ .Response }}<|im_end|>
+PARAMETER temperature 0.2
+PARAMETER top_p 0.9
+PARAMETER num_predict 512
 

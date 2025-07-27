@@ -1,0 +1,17 @@
+# ollama create config-mistral-small3-1-24b -f mistral-small3-1-24b.Modelfile
+# ollama create bb-config-mistral-small3-1-24b -f mistral-small3-1-24b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM mistral-small3.1:24b
+# I am based on Mistral Small 3.1, a Large Language Model (LLM) created by Mistral AI, a French startup headquartered in Paris
+# Author: Mistral AI
+# Size on disk: 15 GB
+# Size running: 34 GB
+#  architecture        mistral3    
+#  parameters          24.0B       
+#  context length      131072      
+#  embedding length    5120        
+#  quantization        Q4_K_M      
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_predict 4096
+PARAMETER num_ctx 32768

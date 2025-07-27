@@ -1,0 +1,21 @@
+# ollama create config-falcon3-10b -f falcon3-10b.Modelfile
+# ollama create bb-config-falcon3-10b -f falcon3-10b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM falcon3:10b
+# I'm based on the Falcon Foundation models developed by TII (Technology Innovation Institute)
+# Author: Technology Innovation Institute (TII)
+# Size on disk: 
+# Size running: 13 GB
+# ollama show config-falcon3-10b && ollama run config-falcon3-10b "what llm model are you"
+#  architecture        llama     
+#  parameters          7.5B      
+#  context length      32768     
+#  embedding length    3072      
+#  quantization        Q4_K_M    
+
+# roo:
+#  agents went a bit off the rails
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_predict 4096
+PARAMETER num_ctx 32768

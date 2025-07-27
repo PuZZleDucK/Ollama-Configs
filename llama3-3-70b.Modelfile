@@ -1,0 +1,18 @@
+# ollama create config-llama3-3-70b -f llama3-3-70b.Modelfile
+# ollama create bb-config-llama3-3-70b -f llama3-3-70b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM llama3.3:70b
+# Error: llama runner process has terminated: cudaMalloc failed: out of memory
+# Author: Meta
+# Size on disk: 42 GB
+# Size running: 84 GB
+#  architecture        llama     
+#  parameters          70.6B     
+#  context length      131072    
+#  embedding length    8192      
+#  quantization        Q4_K_M    
+
+
+PARAMETER temperature 0.6
+PARAMETER top_p 0.95
+PARAMETER num_ctx 131072
+PARAMETER num_predict 32768

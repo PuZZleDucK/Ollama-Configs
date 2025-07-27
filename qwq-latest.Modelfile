@@ -1,0 +1,17 @@
+# ollama create config-qwq-latest -f qwq-latest.Modelfile
+# ollama create bb-config-qwq-latest -f qwq-latest.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM qwq:latest
+# I am **Qwen**, a large language model developed by Alibaba Cloud
+# Author: Alibaba (Qwen Team)
+# Size on disk: 
+# Size running: 32 GB
+# ollama show config-qwq-latest && ollama run config-qwq-latest "what llm model are you"
+#  architecture        qwen2     
+#  parameters          32.8B     
+#  context length      40960     
+#  embedding length    5120      
+#  quantization        Q4_K_M    
+
+PARAMETER temperature 0.3
+PARAMETER top_p 0.95
+PARAMETER num_ctx 32768

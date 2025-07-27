@@ -1,0 +1,19 @@
+# ollama create config-devsdocode-llama-3-8b-uncensored -f devsdocode-llama-3-8b-uncensored.Modelfile
+# ollama create bb-config-devsdocode-llama-3-8b-uncensored -f devsdocode-llama-3-8b-uncensored.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/DevsDoCode/LLama-3-8b-Uncensored-Q4_K_M-GGUF:Q4_K_M
+# I'm an instance of the BERT-based language model, specifically a variant called "Conversational AI"
+# Author: DevsDoCode
+# Size on disk: 
+# Size running: 6.9 GB
+#  architecture        llama     
+#  parameters          8.0B      
+#  context length      8192      
+#  embedding length    4096      
+#  quantization        Q4_K_M    
+
+# Roo:
+#  created first agent but issues with tool calls
+
+PARAMETER temperature 0.3
+PARAMETER top_p 0.95
+PARAMETER num_ctx 32768

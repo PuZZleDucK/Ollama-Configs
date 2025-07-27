@@ -1,0 +1,30 @@
+# ollama create config-devstral-24b -f devstral-24b.Modelfile
+# ollama create bb-config-devstral-24b -f devstral-24b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM devstral:24b
+# I am Devstral, a helpful agentic model trained by Mistral AI and using the OpenHands scaffold.
+# Author: Mistral AI
+# Size on disk: 14 GB
+# Size running: 24 GB
+# ollama show config-devstral-24b && ollama run config-devstral-24b "what llm model are you"
+#  architecture        llama     
+#  parameters          23.6B     
+#  context length      131072    
+#  embedding length    5120      
+#  quantization        Q4_K_M    
+
+# roo:
+#  clear architech instructions
+#  good architech checklist (and actually a checklist)
+#  good file tool use
+#  some code agents wrote docs, some wrote tests
+#  going well when context hit 32k - condensed successfully
+#  ran tests and game to verify
+#  
+#  🏅?
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.95
+PARAMETER num_ctx 40000
+PARAMETER num_predict 40960
+PARAMETER min_p 0.01
+PARAMETER repeat_penalty 1.0

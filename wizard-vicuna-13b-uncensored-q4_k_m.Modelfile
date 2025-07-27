@@ -1,0 +1,16 @@
+# ollama create config-wizard-vicuna-13b-uncensored-q4_k_m -f wizard-vicuna-13b-uncensored-q4_k_m.Modelfile
+# ollama create bb-config-wizard-vicuna-13b-uncensored-q4_k_m -f wizard-vicuna-13b-uncensored-q4_k_m.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/TheBloke/Wizard-Vicuna-13B-Uncensored-GGUF:Q4_K_M
+# Hi @Nick I'm using the LSTM from Keras.
+# Author: TheBloke
+# Size on disk: 7.9 GB
+# Size running: 10 GB
+#     architecture        llama     
+#  parameters          13.0B     
+#  context length      2048      
+#  embedding length    5120      
+#  quantization        Q4_K_M    
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 32768

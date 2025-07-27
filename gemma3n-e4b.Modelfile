@@ -1,0 +1,20 @@
+# ollama create config-gemma3n-e4b -f gemma3n-e4b.Modelfile
+# ollama create bb-config-gemma3n-e4b -f gemma3n-e4b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM gemma3n:e4b
+# 
+# Author: Google
+# Size on disk: 
+# Size running: 8.3 GB
+# ollama show config-gemma3n-e4b && ollama run config-gemma3n-e4b "what llm model are you"
+#  architecture        gemma3n    
+#  parameters          6.9B       
+#  context length      32768      
+#  embedding length    2048       
+#  quantization        Q4_K_M     
+
+PARAMETER temperature 1.0
+PARAMETER top_p 0.95
+PARAMETER top_k 64
+PARAMETER min_p 0.0
+PARAMETER repeat_penalty 1.0
+PARAMETER num_ctx 32768

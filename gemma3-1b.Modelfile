@@ -1,0 +1,19 @@
+# ollama create config-gemma3-1b -f gemma3-1b.Modelfile
+# ollama create bb-config-gemma3-1b -f gemma3-1b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM gemma3:1b
+# I’m currently running on the Gemma family of models!
+# Author: Google
+# Size on disk: 
+# Size running: 2.3 GB
+#  architecture        gemma3     
+#  parameters          999.89M    
+#  context length      32768      
+#  embedding length    1152       
+#  quantization        Q4_K_M     
+
+PARAMETER temperature 1.0
+PARAMETER top_p 0.95
+PARAMETER top_k 64
+PARAMETER num_ctx 32768
+PARAMETER min_p 0.0
+PARAMETER repeat_penalty 1.0

@@ -1,0 +1,19 @@
+# ollama create config-gemma3-27b -f gemma3-27b.Modelfile
+# ollama create bb-config-gemma3-27b -f gemma3-27b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM gemma3:27b
+# I'm Gemma, an open-weights AI assistant
+# Author: Google
+# Size on disk: 
+# Size running: 40 GB
+# ollama show config-gemma3-27b && ollama run config-gemma3-27b "what llm model are you"
+#  architecture        gemma3    
+#  parameters          27.4B     
+#  context length      131072    
+#  embedding length    5376      
+#  quantization        Q4_K_M    
+PARAMETER temperature 1.0
+PARAMETER top_p 0.95
+PARAMETER top_k 64
+PARAMETER num_ctx 131072
+PARAMETER min_p 0.0
+PARAMETER repeat_penalty 1.0

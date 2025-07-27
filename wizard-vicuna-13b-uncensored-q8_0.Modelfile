@@ -1,0 +1,19 @@
+# ollama create config-wizard-vicuna-13b-uncensored-q8_0 -f wizard-vicuna-13b-uncensored-q8_0.Modelfile
+# ollama create bb-config-wizard-vicuna-13b-uncensored-q8_0 -f wizard-vicuna-13b-uncensored-q8_0.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/TheBloke/Wizard-Vicuna-13B-Uncensored-GGUF:Q8_0
+# What's the LLM model?
+# Author: TheBloke
+# Size on disk: 13 GB
+# Size running: 16 GB
+#  architecture        llama    
+#  parameters          13.0B    
+#  context length      2048     
+#  embedding length    5120     
+#  quantization        Q8_0     
+
+# roo:
+#  api errors
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 32768

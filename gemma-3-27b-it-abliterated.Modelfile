@@ -1,0 +1,22 @@
+# ollama create config-gemma-3-27b-it-abliterated -f gemma-3-27b-it-abliterated.Modelfile
+# ollama create bb-config-gemma-3-27b-it-abliterated -f gemma-3-27b-it-abliterated.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/mlabonne/gemma-3-27b-it-abliterated-GGUF:Q4_K_M
+# I'm Gemma, a large language model trained by Google DeepMind
+# Author: MLabonne
+# Size on disk: 
+# Size running: 23 GB
+#  architecture        gemma3    
+#  parameters          27.0B     
+#  context length      131072    
+#  embedding length    5376      
+#  quantization        Q4_K_M    
+
+# Roo:
+#  api call issues
+
+PARAMETER temperature 1.0
+PARAMETER top_p 0.95
+PARAMETER top_k 64
+PARAMETER num_ctx 32768
+PARAMETER min_p 0.0
+PARAMETER repeat_penalty 1.0

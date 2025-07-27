@@ -1,0 +1,16 @@
+# ollama create config-llama3-2-vision-11b -f llama3-2-vision-11b.Modelfile
+# ollama create bb-config-llama3-2-vision-11b -f llama3-2-vision-11b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM llama3.2-vision:11b
+# I’m a large language model.
+# Author: Meta
+# Size on disk: 7.8 GB
+# Size running: 38 GB
+#  architecture        mllama    
+#  parameters          10.7B     
+#  context length      131072    
+#  embedding length    4096      
+#  quantization        Q4_K_M    
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 131072

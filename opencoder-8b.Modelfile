@@ -1,0 +1,19 @@
+# ollama create config-opencoder-8b -f opencoder-8b.Modelfile
+# ollama create bb-config-opencoder-8b -f opencoder-8b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM opencoder:8b
+# As an AI text-based model, I don't have a physical form or "model"
+# Author: OpenCoder Team
+# Size on disk: 4.7 GB
+# Size running: 
+#  architecture        llama     
+#  parameters          7.8B      
+#  context length      8192      
+#  embedding length    4096      
+#  quantization        Q4_K_M    
+
+# roo:
+#  could not handle roo prompt
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.95
+PARAMETER num_ctx 32768

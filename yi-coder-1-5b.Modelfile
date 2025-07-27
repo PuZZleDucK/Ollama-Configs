@@ -1,0 +1,17 @@
+# ollama create config-yi-coder-1-5b -f yi-coder-1-5b.Modelfile
+# ollama create bb-config-yi-coder-1-5b -f yi-coder-1-5b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM yi-coder:1.5b
+# As an AI, I don't possess a natural language model
+# Author: 01.AI
+# Size on disk: 
+# Size running: 9.2 GB
+# ollama show config-yi-coder-1-5b && ollama run config-yi-coder-1-5b "what llm model are you"
+    #  architecture        llama     
+    #  parameters          1.5B      
+    #  context length      131072    
+    #  embedding length    2048      
+    #  quantization        Q4_0      
+
+PARAMETER temperature 0.6
+PARAMETER top_p 0.95
+PARAMETER num_ctx 32768

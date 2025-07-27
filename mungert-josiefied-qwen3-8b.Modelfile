@@ -1,0 +1,26 @@
+# ollama create config-mungert-josiefied-qwen3-8b -f mungert-josiefied-qwen3-8b.Modelfile
+# ollama create bb-config-mungert-josiefied-qwen3-8b -f mungert-josiefied-qwen3-8b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/Mungert/Josiefied-Qwen3-8B-abliterated-v1-GGUF:latest
+# I am Qwen, a large language model developed by Alibaba Cloud
+# Author: Mungert
+# Size on disk: 5.1 GB
+# Size running: 13 GB
+#  architecture        qwen3     
+#  parameters          8.2B      
+#  context length      40960     
+#  embedding length    4096      
+#  quantization        Q4_K_M    
+
+# roo: 
+#  can handle prompt and create agents.
+#  didn't plan much, overly simple.
+#  doesn't really grok roos checklists some of the time.
+#  all code in one big file with lots of unused code
+#  but best performance of an 8b model yet 🥈
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 32768
+PARAMETER top_k 20
+PARAMETER min_p 0.0
+PARAMETER presence_penalty 1.5

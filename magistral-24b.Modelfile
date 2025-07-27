@@ -1,0 +1,11 @@
+# ollama create config-magistral-24b -f magistral-24b.Modelfile
+# ollama create bb-config-magistral-24b -f magistral-24b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM magistral:24b
+# I infer that I am likely based on a transformer-based architecture like GPT
+# Author: Mistral AI
+# Size on disk: 
+# Size running: 22 GB
+
+PARAMETER temperature 0.3
+PARAMETER top_p 0.95
+PARAMETER num_ctx 32768

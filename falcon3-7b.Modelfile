@@ -1,0 +1,18 @@
+# ollama create config-falcon3-7b -f falcon3-7b.Modelfile
+# ollama create bb-config-falcon3-7b -f falcon3-7b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM falcon3:7b
+# As an AI, I don't have personal experiences or a specific model identity in the way humans do
+# Author: Technology Innovation Institute (TII)
+# Size on disk: 
+# Size running: 9.8 GB
+# ollama show config-falcon3-7b && ollama run config-falcon3-7b "what llm model are you"
+#  architecture        llama     
+#  parameters          7.5B      
+#  context length      32768     
+#  embedding length    3072      
+#  quantization        Q4_K_M    
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_predict 4096
+PARAMETER num_ctx 32768

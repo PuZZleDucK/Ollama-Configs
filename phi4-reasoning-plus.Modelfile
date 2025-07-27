@@ -1,0 +1,21 @@
+# ollama create config-phi4-reasoning-plus -f phi4-reasoning-plus.Modelfile
+# ollama create bb-config-phi4-reasoning-plus -f phi4-reasoning-plus.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM phi4-reasoning:plus
+# 
+# Author: Microsoft Research
+# Size on disk: 11 GB
+# Size running: 22 GB
+#  architecture        phi3      
+#  parameters          14.7B     
+#  context length      32768     
+#  embedding length    5120      
+#  quantization        Q4_K_M    
+
+# roo:
+#  could not respond to roo formats
+
+PARAMETER temperature 0.3
+PARAMETER top_p 0.95
+PARAMETER num_predict 100
+PARAMETER top_k 40
+PARAMETER num_ctx 32768

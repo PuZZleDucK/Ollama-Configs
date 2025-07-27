@@ -1,0 +1,17 @@
+# ollama create config-exaone-deep-7-8b -f exaone-deep-7-8b.Modelfile
+# ollama create bb-config-exaone-deep-7-8b -f exaone-deep-7-8b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM exaone-deep:7.8b
+# Okay, so I need to figure out what LLM model the user is asking about.
+# Author: NAVER
+# Size on disk: 
+# Size running: 10 GB
+# ollama show config-exaone-deep-7-8b && ollama run config-exaone-deep-7-8b "what llm model are you"
+#  architecture        exaone    
+#  parameters          7.8B      
+#  context length      32768     
+#  embedding length    4096      
+#  quantization        Q4_K_M    
+
+PARAMETER temperature 0.6
+PARAMETER top_p 0.95
+PARAMETER num_ctx 32768

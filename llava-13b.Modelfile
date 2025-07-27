@@ -1,0 +1,16 @@
+# ollama create config-llava-13b -f llava-13b.Modelfile
+# ollama create bb-config-llava-13b -f llava-13b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM llava:13b
+# I am a language model called Vicuna, and I was trained by researchers from Large Model Systems Organization (LMSYS)
+# Author: LLaVA Team
+# Size on disk: 8.0 GB
+# Size running: 12 GB
+#  architecture        llama    
+#  parameters          13.0B    
+#  context length      4096     
+#  embedding length    5120     
+#  quantization        Q4_0     
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 8000

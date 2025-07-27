@@ -1,0 +1,19 @@
+# ollama create config-rogue-creative-instruct-uncensored -f rogue-creative-instruct-uncensored.Modelfile
+# ollama create bb-config-rogue-creative-instruct-uncensored -f rogue-creative-instruct-uncensored.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/DavidAU/L3.2-Rogue-Creative-Instruct-Uncensored-Abliterated-7B-GGUF:Q8_0
+# I am an open-source large language model (LLM) based on the transformer architecture
+# Author: DavidAU
+# Size on disk: 
+# Size running: 19 GB
+#  architecture        llama     
+#  parameters          7.5B      
+#  context length      131072    
+#  embedding length    3072      
+#  quantization        Q8_0      
+
+# roo:
+#  looped over agent creation
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 32768
