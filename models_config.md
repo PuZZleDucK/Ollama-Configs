@@ -9,7 +9,7 @@
 - context_length: 128k
   - Optional: top_k=40, top_p=0.95, min_p=0.05, typical_p=1.0, temperature=0.0
 
-[ ] # command-r7b:7b-12-2024-fp16
+[x] # command-r7b:7b-12-2024-fp16
 - Slug: `config-command-r7b-7b-12-2024-fp16`
 - Author: Cohere
 - temperature: 0.3
@@ -17,26 +17,8 @@
 - context_length: 128k
   - Optional: top_k=40, top_p=0.95, min_p=0.05, typical_p=1.0, temperature=0.0
 
-[ ] # command-r7b-ctx-32k:7b # clean up once new config built
-- Slug: `config-command-r7b-ctx-32k-7b`
-- Author: Cohere
-- temperature: 0.3
-- stop: ["<|START_OF_TURN_TOKEN|>", "<|END_OF_TURN_TOKEN|>", "<|END_RESPONSE|>"]
-- context_length: 32k
-  - Optional: top_k=40, top_p=0.95, min_p=0.05, typical_p=1.0, temperature=0.0
-
 [x] # deepcoder:14b
 - Slug: `config-deepcoder-14b`
-- Author: Agentica
-- temperature: 0.6
-- top_p: 0.95
-- max_tokens: 64000
-- avoid_system_prompt: true
-- context_length: 32k
-  - Optional: top_k=50, temperature=0.2, repetition_penalty=1.03, max_new_tokens=256, stop=["\nUser:", "<|endoftext|>", "</s>"]
-
-[ ] # deepcoder-ctx-32k:14b - remove
-- Slug: `config-deepcoder-ctx-32k-14b`
 - Author: Agentica
 - temperature: 0.6
 - top_p: 0.95
@@ -92,38 +74,6 @@
 - avoid_system_prompt: true
 - context_length: 128k
   - Optional: top_p=0.95
-
-[ ] # deepseek-r1-ctx-32k:14b - remove
-- Slug: `config-deepseek-r1-ctx-32k-14b`
-- Author: DeepSeek AI
-- temperature: 0.6
-- top_p: 0.95
-- context_length: 32k
-  - Optional: presence_penalty=1.5, top_k=20
-
-[ ] # deepseek-r1-ctx-32k:7b - remove
-- Slug: `config-deepseek-r1-ctx-32k-7b`
-- Author: DeepSeek AI
-- temperature: 0.6
-- top_p: 0.95
-- context_length: 32k
-  - Optional: presence_penalty=1.5, top_k=20
-
-[ ] # deepseek-r1-ctx-32k:8b - remove
-- Slug: `config-deepseek-r1-ctx-32k-8b`
-- Author: DeepSeek AI
-- temperature: 0.6
-- top_p: 0.95
-- context_length: 32k
-  - Optional: presence_penalty=1.5, top_k=20
-
-[ ] # deepseek-r1-ctx-32k:32b - remove
-- Slug: `config-deepseek-r1-ctx-32k-32b`
-- Author: DeepSeek AI
-- temperature: 0.6
-- top_p: 0.95
-- context_length: 32k
-  - Optional: presence_penalty=1.5, top_k=20
 
 [-] # deepseek-r1-distill-qwen-1.5b - hallucinated?
 - Slug: `config-deepseek-r1-distill-qwen-1-5b`
@@ -265,7 +215,7 @@
 - context_length: 128k
   - Optional: top_k=20, min_p=0.0, presence_penalty=1.5
 
-[ ] # qwen2.5vl:3b - ERROR
+[x] # qwen2.5vl:3b - ERROR
 - Slug: `config-qwen2-5vl-3b`
 - Author: Alibaba (Qwen Team)
 - temperature: 0.7
@@ -274,7 +224,7 @@
 - context_length: 128k
   - Optional: top_k=20, min_p=0.0, presence_penalty=1.5
 
-# qwen2.5vl:7b
+[x] # qwen2.5vl:7b
 - Slug: `config-qwen2-5vl-7b`
 - Author: Alibaba (Qwen Team)
 - temperature: 0.7
@@ -283,40 +233,13 @@
 - context_length: 128k
   - Optional: top_k=20, min_p=0.0, presence_penalty=1.5
 
-# qwen2.5vl:32b
+[x] # qwen2.5vl:32b
 - Slug: `config-qwen2-5vl-32b`
 - Author: Alibaba (Qwen Team)
 - temperature: 0.7
 - top_p: 0.8
 - repetition_penalty: 1.05
 - context_length: 128k
-  - Optional: top_k=20, min_p=0.0, presence_penalty=1.5
-
-# qwen2.5vl-3b-ctx-32k
-- Slug: `config-qwen2-5vl-3b-ctx-32k`
-- Author: Alibaba (Qwen Team)
-- temperature: 0.7
-- top_p: 0.8
-- repetition_penalty: 1.05
-- context_length: 32k
-  - Optional: top_k=20, min_p=0.0, presence_penalty=1.5
-
-# qwen2.5vl-7b-ctx-32k
-- Slug: `config-qwen2-5vl-7b-ctx-32k`
-- Author: Alibaba (Qwen Team)
-- temperature: 0.7
-- top_p: 0.8
-- repetition_penalty: 1.05
-- context_length: 32k
-  - Optional: top_k=20, min_p=0.0, presence_penalty=1.5
-
-[ ] - # qwen2.5-coder-ctx-32k:32b - delete
-- Slug: `config-qwen2-5-coder-ctx-32k-32b`
-- Author: Alibaba (Qwen Team)
-- temperature: 0.7
-- top_p: 0.8
-- repetition_penalty: 1.05
-- context_length: 32k
   - Optional: top_k=20, min_p=0.0, presence_penalty=1.5
 
 [x] # qwen3:0.6b
@@ -373,15 +296,6 @@
 - context_length: 128k
   - Optional: use thinking-mode config (temperature=0.6, top_p=0.95, top_k=20, min_p=0.0, presence_penalty=1.5) or non-thinking config (temperature=0.7, top_p=0.8, top_k=20, min_p=0.0)
 
-[ ] # qwen3-ctx-32k:32b - remove
-- Slug: `config-qwen3-ctx-32k-32b`
-- Author: Alibaba (Qwen Team)
-- temperature: 0.7
-- top_p: 0.8
-- repetition_penalty: 1.05
-- context_length: 32k
-  - Optional: use thinking-mode config (temperature=0.6, top_p=0.95, top_k=20, min_p=0.0, presence_penalty=1.5) or non-thinking config (temperature=0.7, top_p=0.8, top_k=20, min_p=0.0)
-
 # qwen3:latest - used? - which one?
 - Slug: `config-qwen3-latest`
 - Author: Alibaba (Qwen Team)
@@ -393,14 +307,6 @@
 
 [x] # qwq:latest
 - Slug: `config-qwq-latest`
-- Author: Alibaba (Qwen Team)
-- temperature: 0.7
-- top_p: 0.85
-- context_length: 32k
-  - Optional: None specified by community
-
-[ ] # qwq-ctx-32k:latest - remove
-- Slug: `config-qwq-ctx-32k-latest`
 - Author: Alibaba (Qwen Team)
 - temperature: 0.7
 - top_p: 0.85
@@ -458,7 +364,6 @@
 - memory_requirement: ≥32GB
   - Optional: None specified by community
 
-[ ] Wizard-Vicuna-13B-Uncensored-GGUF-ctx-32k:Q8_0 - remove
 
 [x] # eris_primev3-vision-7b-gguf - not there
 - Slug: `config-eris_primev3-vision-7b-gguf`
@@ -482,20 +387,12 @@
 - top_p: 0.95
   - Optional: None specified by community
 
-[xs] # exaone-deep:32b
+[x] # exaone-deep:32b
 - Slug: `config-exaone-deep-32b`
 - Author: NAVER
 - temperature: 0.6
 - top_p: 0.95
 - context_length: 128k
-  - Optional: None specified by community
-
-[ ] # exaone-deep-ctx-32k:7.8b - delete
-- Slug: `config-exaone-deep-ctx-32k-7-8b`
-- Author: NAVER
-- temperature: 0.6
-- top_p: 0.95
-- context_length: 32k
   - Optional: None specified by community
 
 [x] # falcon3:7b
@@ -512,14 +409,6 @@
 - temperature: 0.7
 - top_p: 0.9
 - max_new_tokens: 4096
-  - Optional: None specified by community
-
-[ ] # falcon3-ctx-32k:10b - remove
-- Slug: `config-falcon3-ctx-32k-10b`
-- Author: Technology Innovation Institute (TII)
-- temperature: 0.7
-- top_p: 0.9
-- context_length: 32k
   - Optional: None specified by community
 
 [x] # gemma3:1b
@@ -558,33 +447,6 @@
 - context_length: 128k
   - Optional: min_p=0.0, repetition_penalty=1.0
 
-[ ] # gemma3-ctx-32k:4b - remove
-- Slug: `config-gemma3-ctx-32k-4b`
-- Author: Google
-- temperature: 1.0
-- top_p: 0.95
-- top_k: 64
-- context_length: 32k
-  - Optional: min_p=0.0, repetition_penalty=1.0
-
-[ ] # gemma3-ctx-32k:12b - remove
-- Slug: `config-gemma3-ctx-32k-12b`
-- Author: Google
-- temperature: 1.0
-- top_p: 0.95
-- top_k: 64
-- context_length: 32k
-  - Optional: min_p=0.0, repetition_penalty=1.0
-
-[ ] # gemma3-ctx-32k:27b - remove
-- Slug: `config-gemma3-ctx-32k-27b`
-- Author: Google
-- temperature: 1.0
-- top_p: 0.95
-- top_k: 64
-- context_length: 32k
-  - Optional: min_p=0.0, repetition_penalty=1.0
-
 [x] # gemma3n:e2b
 - Slug: `config-gemma3n-e2b`
 - Author: Google
@@ -599,15 +461,6 @@
 - temperature: 1.0
 - top_p: 0.95
 - top_k: 64
-  - Optional: min_p=0.0, repetition_penalty=1.0
-
-[ ] # gemma3n-ctx-32k:e4b - remove
-- Slug: `config-gemma3n-ctx-32k-e4b`
-- Author: Google
-- temperature: 1.0
-- top_p: 0.95
-- top_k: 64
-- context_length: 32k
   - Optional: min_p=0.0, repetition_penalty=1.0
 
 [-] # gemma-the-writer-n-restless-quill-10b-uncensored-gguf-q8_0
@@ -746,7 +599,7 @@
 - top_p: 0.95
   - Optional: None specified by community
 
-[ ] # hf.co/thebloke/wizard-vicuna-13b-uncensored-gguf:q4_k_m
+[x] # hf.co/thebloke/wizard-vicuna-13b-uncensored-gguf:q4_k_m
 - Slug: `config-hf-co-thebloke-wizard-vicuna-13b-uncensored-gguf-q4_k_m`
 - Author: TheBloke
 - temperature: 0.7
@@ -760,38 +613,6 @@
 - top_p: 0.9
   - Optional: None specified by community
 
-[-] # josiefied-deepseek-r1-0528-qwen3-8b-abliterated-v1-gguf-ctx-32k:q8_0 - duplicate
-- Slug: `config-josiefied-deepseek-r1-0528-qwen3-8b-abliterated-v1-gguf-ctx-32k-q8_0`
-- Author: Gökdeniz Gülmez
-- temperature: 0.6
-- top_p: 0.95
-- context_length: 32k
-  - Optional: top_k=20, min_p=0.0, presence_penalty=1.5
-
-[ ] # josiefied-qwen3-8b-abliterated-v1-gguf-ctx-32k:latest - delete
-- Slug: `config-josiefied-qwen3-8b-abliterated-v1-gguf-ctx-32k-latest`
-- Author: Gökdeniz Gülmez
-- temperature: 0.7
-- top_p: 0.9
-- context_length: 32k
-  - Optional: use thinking-mode config (temperature=0.6, top_p=0.95, top_k=20, min_p=0.0, presence_penalty=1.5) or non-thinking config (temperature=0.7, top_p=0.8, top_k=20, min_p=0.0)
-
-[-] # llama-3.1-8b-lexi-uncensored-v2-gguf-ctx-32k:latest - duplicate
-- Slug: `config-llama-3-1-8b-lexi-uncensored-v2-gguf-ctx-32k-latest`
-- Author: Orenguteng
-- temperature: 0.6
-- top_p: 0.95
-- context_length: 32k
-  - Optional: None specified by community
-
-[-] # llama-3-2-8x3b-moe-dark-champion-instruct-18-4b-gguf-ctx-32k:q8_0 - duplicate
-- Slug: `config-llama-3-2-8x3b-moe-dark-champion-instruct-18-4b-gguf-ctx-32k-q8_0`
-- Author: DavidAU
-- temperature: 0.6
-- top_p: 0.95
-- context_length: 32k
-  - Optional: None specified by community
-
 [x] # llama3.2-vision:11b
 - Slug: `config-llama3-2-vision-11b`
 - Author: Meta
@@ -800,28 +621,12 @@
 - context_length: 128k
   - Optional: None specified by community
 
-[ ] # llama3.2-vision-11b-ctx-32k - delete
-- Slug: `config-llama3-2-vision-11b-ctx-32k`
-- Author: Meta
-- temperature: 0.7
-- top_p: 0.9
-- context_length: 32k
-  - Optional: None specified by community
-
 [x] # llama3.3:70b
 - Slug: `config-llama3-3-70b`
 - Author: Meta
 - temperature: 0.6
 - top_p: 0.95
 - max_new_tokens: 32768
-  - Optional: None specified by community
-
-[ ] # LLama-3-8b-uncensored-q4_k_m-gguf-ctx-32k:q4_k_m - delete
-- Slug: `config-LLama-3-8b-uncensored-q4_k_m-gguf-ctx-32k-q4_k_m`
-- Author: DevsDoCode
-- temperature: 0.6
-- top_p: 0.95
-- context_length: 32k
   - Optional: None specified by community
 
 [x] # llava:7b
@@ -848,32 +653,8 @@
 - context_length: 8k
   - Optional: None specified by community
 
-[ ] # llava-ctx-32k:13b - delete
-- Slug: `config-llava-ctx-32k-13b`
-- Author: LLaVA Team
-- temperature: 0.7
-- top_p: 0.9
-- context_length: 32k
-  - Optional: None specified by community
-
 [x] # magistral:24b
 - Slug: `config-magistral-24b`
-- Author: Mistral AI
-- temperature: 0.7
-- top_p: 0.9
-- context_length: 32k
-  - Optional: top_p=0.95, temperature=0.7, max_tokens=40960
-
-[ ] # magistral-ctx-32k:24b - remove
-- Slug: `config-magistral-ctx-32k-24b`
-- Author: Mistral AI
-- temperature: 0.7
-- top_p: 0.9
-- context_length: 32k
-  - Optional: top_p=0.95, temperature=0.7, max_tokens=40960
-
-# [ ] magistral-small-2506-abliterated-i1-gguf-ctx-32k:q2_k - dupe
-- Slug: `config-magistral-small-2506-abliterated-i1-gguf-ctx-32k-q2_k`
 - Author: Mistral AI
 - temperature: 0.7
 - top_p: 0.9
@@ -896,14 +677,6 @@
 - max_new_tokens: 4096
   - Optional: temperature=0.15
 
-[ ] # mistral-small3.1-ctx-32k:24b - remove
-- Slug: `config-mistral-small3-1-ctx-32k-24b`
-- Author: Mistral AI
-- temperature: 0.7
-- top_p: 0.9
-- context_length: 32k
-  - Optional: temperature=0.15
-
 [x] # mistral-small3.2:24b
 - Slug: `config-mistral-small3-2-24b`
 - Author: Mistral AI
@@ -919,14 +692,6 @@
 - top_p: 0.9
 - max_new_tokens: 4096
   - Optional: temperature=0.15
-
-[-] # Nyan_Chaos-Vision-7B-GGUF-ctx-32k:q8_0 - dupe
-- Slug: `config-Nyan_Chaos-Vision-7B-GGUF-ctx-32k-q8_0`
-- Author: Mradermacher
-- temperature: 0.7
-- top_p: 0.9
-- context_length: 32k
-  - Optional: None specified by community
 
 [-] # nyan_chaos-vision-7b-gguf:q8_0 - dupe
 - Slug: `config-nyan_chaos-vision-7b-gguf-q8_0`
@@ -951,14 +716,6 @@
 - context_length: 32k
   - Optional: None specified by community
 
-[ ] # opencoder-ctx-32k:8b - remove
-- Slug: `config-opencoder-ctx-32k-8b`
-- Author: OpenCoder Team
-- temperature: 0.7
-- top_p: 0.95
-- context_length: 32k
-  - Optional: None specified by community
-
 [x] # phi4-mini-reasoning:3.8b
 - Slug: `config-phi4-mini-reasoning-3-8b`
 - Author: Microsoft Research
@@ -977,25 +734,6 @@
 - max_new_tokens: 4096
   - Optional: top_k=50
 
-[ ] # phi4-reasoning-plus-ctx-32k - remove
-- Slug: `config-phi4-reasoning-plus-ctx-32k`
-- Author: Microsoft Research
-- temperature: 0.8
-- top_p: 0.95
-- do_sample: true
-- max_new_tokens: 4096
-- context_length: 32k
-  - Optional: top_k=50
-
-[ ] # qwen2.5vl-ctx-32k:32b - remove
-- Slug: `config-qwen2-5vl-ctx-32k-32b`
-- Author: Alibaba (Qwen Team)
-- temperature: 0.7
-- top_p: 0.8
-- repetition_penalty: 1.05
-- context_length: 32k
-  - Optional: top_k=20, min_p=0.0, presence_penalty=1.5
-
 [x] # yi-coder:1.5b
 - Slug: `config-yi-coder-1-5b`
 - Author: 01.AI
@@ -1012,14 +750,6 @@
 - context_length: 32k
   - Optional: None specified by community
 
-[ ] # yi-coder-ctx-32k:9b - remove
-- Slug: `config-yi-coder-ctx-32k-9b`
-- Author: 01.AI
-- temperature: 0.6
-- top_p: 0.95
-- context_length: 32k
-  - Optional: None specified by community
-
 [x] # devstral:24b
 - Slug: `config-devstral-24b`
 - Author: Mistral AI
@@ -1027,15 +757,6 @@
 - top_p: 0.95
 - max_tokens: 40960
 - context_length: 40k
-  - Optional: top_k=64, min_p=0.01, repetition_penalty=1.0
-
-[ ] # devstral-ctx-32k:24b - remove
-- Slug: `config-devstral-ctx-32k-24b`
-- Author: Mistral AI
-- temperature: 0.7
-- top_p: 0.95
-- max_tokens: 40960
-- context_length: 32k
   - Optional: top_k=64, min_p=0.01, repetition_penalty=1.0
 
 [-] # devstral:latest - dupe
@@ -1056,7 +777,7 @@
 - context_length: 8k
   - Optional: None specified by community
 
-[ ] # granite3.2-vision:2b
+[x] # granite3.2-vision:2b
 - Slug: `config-granite3-2-vision-2b`
 - Author: IBM
 - temperature: 0.7
@@ -1064,15 +785,7 @@
 - context_length: 128k
   - Optional: None specified by community
 
-# granite3.2-vision-2b-ctx-32k:latest
-- Slug: `config-granite3-2-vision-2b-ctx-32k-latest`
-- Author: IBM
-- temperature: 0.7
-- top_p: 0.9
-- context_length: 32k
-  - Optional: None specified by community
-
-# granite3.3:2b
+[x] # granite3.3:2b
 - Slug: `config-granite3-3-2b`
 - Author: IBM
 - temperature: 0.7
@@ -1080,7 +793,7 @@
 - context_length: 128k
   - Optional: None specified by community
 
-# granite3.3:8b
+[x] # granite3.3:8b
 - Slug: `config-granite3-3-8b`
 - Author: IBM
 - temperature: 0.7
@@ -1088,15 +801,7 @@
 - context_length: 128k
   - Optional: None specified by community
 
-# granite3.3-ctx-32k:8b
-- Slug: `config-granite3-3-ctx-32k-8b`
-- Author: IBM
-- temperature: 0.7
-- top_p: 0.9
-- context_length: 32k
-  - Optional: None specified by community
-
-# granite3-dense:2b
+[x] # granite3-dense:2b
 - Slug: `config-granite3-dense-2b`
 - Author: IBM
 - temperature: 0.7
@@ -1104,7 +809,7 @@
 - context_length: 128k
   - Optional: None specified by community
 
-# granite3-dense:8b
+[x] # granite3-dense:8b
 - Slug: `config-granite3-dense-8b`
 - Author: IBM
 - temperature: 0.7
@@ -1112,7 +817,7 @@
 - context_length: 128k
   - Optional: None specified by community
 
-# granite3-moe:1b
+[x] # granite3-moe:1b
 - Slug: `config-granite3-moe-1b`
 - Author: IBM
 - temperature: 0.7
@@ -1120,7 +825,7 @@
 - context_length: 128k
   - Optional: None specified by community
 
-# granite3-moe:3b
+[x] # granite3-moe:3b
 - Slug: `config-granite3-moe-3b`
 - Author: IBM
 - temperature: 0.7
@@ -1128,7 +833,7 @@
 - context_length: 128k
   - Optional: None specified by community
 
-# hermes3:3b
+[x] # hermes3:3b
 - Slug: `config-hermes3-3b`
 - Author: Nous Research
 - temperature: 0.6
@@ -1137,7 +842,7 @@
 - context_length: 8k
   - Optional: top_k=50, repetition_penalty=1.1, temperature=0.8
 
-# hermes3:8b
+[x] # hermes3:8b
 - Slug: `config-hermes3-8b`
 - Author: Nous Research
 - temperature: 0.8
@@ -1148,30 +853,43 @@
 - context_length: 8k
   - Optional: top_k=50
 
-# hermes3-ctx-32k:8b
-- Slug: `config-hermes3-ctx-32k-8b`
-- Author: Nous Research
-- temperature: 0.8
-- top_p: 0.9
-- repetition_penalty: 1.1
-- do_sample: true
-- max_new_tokens: 2500
-- context_length: 32k
-  - Optional: top_k=50
-
-# Eris_PrimeV3-Vision-7B-GGUF-IQ-Imatrix-ctx-32k:latest
-- Slug: `config-Eris_PrimeV3-Vision-7B-GGUF-IQ-Imatrix-ctx-32k-latest`
-- Author: Lewdiculous
-- temperature: 0.7
-- top_p: 0.9
-- max_new_tokens: 512
-- context_length: 32k
-  - Optional: top_p=1, top_k=0, top_a=0, tfs=1, epsilon_cutoff=0, eta_cutoff=0, typical_p=1, min_p=0.1, repetition_penalty=1
-
 
 
 # todo
-Phi-4-flash
-qwen3-update
-qwen3-coder
-qwen3-think
+[-] Phi-4-flash
+[x] qwen3-update
+[x] qwen3-coder
+[-] qwen3-think
+
+https://allenai.org/olmo
+instruct
+evaluated them on the Tülu 3 evaluation suite implemented in OLMES, which consists of benchmarks assessing models’ instruction-following, knowledge recall, and math and general reasoning
+[x] olmo2:7b
+[x] olmo2:13b
+instruction following model family, offering fully open-source data, code, and recipes
+[x] tulu3:8b
+[x] qwen3-coder:30b
+qwen3-coder-30b
+[x] gpt-oss:20b - gpt-oss-20b
+#  replace daredevil with:
+#  [x] closex/neuraldaredevil-8b-abliterated
+#  and
+#  [x] closex/neuraldaredevil-8b-abliterated:q2_0
+
+
+gosu coder:
+ollama run hf.co/unsloth/gpt-oss-20b-GGUF:Q8_K_XL
+[x] https://huggingface.co/unsloth/gpt-oss-20b-GGUF
+
+smaller than recomended:
+ollama run hf.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q3_K_XL
+[x] https://huggingface.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF
+
+ollama run hf.co/unsloth/Devstral-Small-2507-GGUF:Q3_K_XL
+[x] https://huggingface.co/unsloth/Devstral-Small-2507-GGUF?show_file_info=Devstral-Small-2507-UD-Q3_K_XL.gguf
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+# ollama create config-granite3-moe-1b -f granite3-moe-1b.Modelfile
+# ollama create bb-config-granite3-moe-1b -f granite3-moe-1b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM granite3-moe:1b
+# I am a model based on the LLaMA (Language Learning Model Architecture) framework
+# Author: IBM
+# Size on disk: 
+# Size running: 1.6 GB
+#  architecture        granitemoe    
+#  parameters          1.3B          
+#  context length      4096          
+#  embedding length    1024          
+#  quantization        Q4_K_M        
+
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 131072

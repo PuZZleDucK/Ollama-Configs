@@ -12,6 +12,15 @@ FROM dolphin3:8b
 #  embedding length    4096      
 #  quantization        Q4_K_M    
 
+# roo:
+#  great checklist
+#  used godot ??? (and that was the best option)
+#  architecht took charge and started delegating other architechts
+#  reads files for context
+#  forgets when it `cd`s
+#  refused to run it
+#  could not run it but fixed the errors
+
 PARAMETER temperature 0.6
 PARAMETER top_p 0.9
 PARAMETER num_ctx 8000

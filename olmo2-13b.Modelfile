@@ -1,0 +1,16 @@
+# ollama create config-olmo2-13b -f olmo2-13b.Modelfile
+# ollama create bb-config-olmo2-13b -f olmo2-13b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM olmo2:13b
+# I am not based on a single specific Language Model (LLM) like GPT-3 or T5
+# Author: 
+# Size on disk: 
+# Size running: 12 GB
+#  architecture        olmo2     
+#  parameters          13.7B     
+#  context length      4096      
+#  embedding length    5120      
+#  quantization        Q4_K_M    
+#  https://allenai.org/olmo
+#  evaluated them on the Tülu 3 evaluation suite implemented in OLMES, which consists of benchmarks assessing models’ instruction-following, knowledge recall, and math and general reasoning
+
+PARAMETER num_ctx 4000

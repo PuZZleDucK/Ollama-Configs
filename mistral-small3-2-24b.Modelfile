@@ -11,6 +11,21 @@ FROM mistral-small3.2:24b
 #  embedding length    5120        
 #  quantization        Q4_K_M      
 
+# roo:
+#  did call an agent but went haywire
+#  made a game window in second run
+#  orchestrator seems quite careful
+#  agents often read files for context
+#  often experience issues but carry on
+#  omg... it works... collision detection not working tho
+#  movment too fast - some systems don't seem to work (dialog, collition, )
+#  now it's broken
+# roo-html:
+#  went off the rails
+#  could not condense context
+#  only made js
+
+
 PARAMETER temperature 0.7
 PARAMETER top_p 0.9
 PARAMETER num_predict 4096

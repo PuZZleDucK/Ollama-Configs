@@ -8,7 +8,7 @@ FROM devstral:24b
 # ollama show config-devstral-24b && ollama run config-devstral-24b "what llm model are you"
 #  architecture        llama     
 #  parameters          23.6B     
-#  context length      131072    
+#  context length      131072    - could we up the context more?
 #  embedding length    5120      
 #  quantization        Q4_K_M    
 
@@ -19,8 +19,26 @@ FROM devstral:24b
 #  some code agents wrote docs, some wrote tests
 #  going well when context hit 32k - condensed successfully
 #  ran tests and game to verify
-#  
-#  🏅?
+#  second condense required
+#  completed project 🏅
+#  - not a great map
+#  - odd size of player
+#  - collision detection not working?
+#  - fell over writing the docs
+#  - orchestrator finally declared victory
+# roo-html:
+#  checked node and npm versions
+#  installed vscode extentions
+#  used git... got stuck in a loop writing the .gitignore
+#  project looks promising but shows nothing and has invalid image file
+#  some wrote docs
+#  often ran the tests and got them passing
+#  requires frequent condencing
+#  declared it finished with an empty page
+#  prompted for fix
+#  finally got it running
+#  collision detection didn't work
+
 
 PARAMETER temperature 0.7
 PARAMETER top_p 0.95

@@ -1,0 +1,19 @@
+# ollama create config-granite3-3-2b -f granite3-3-2b.Modelfile
+# ollama create bb-config-granite3-3-2b -f granite3-3-2b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM granite3.3:2b
+# 
+# Author: IBM
+# Size on disk: 1.5 GB
+# Size running: 20 GB
+# ollama show config-granite3-3-2b && ollama run config-granite3-3-2b "what llm model are you"
+#  architecture        granite    
+#  parameters          2.5B       
+#  context length      131072     
+#  embedding length    2048       
+#  quantization        Q4_K_M     
+#  Error: llama runner process has terminated: cudaMalloc failed: out of memory
+#  ggml_gallocr_reserve_n: failed to allocate CUDA0 buffer of size 9145944064
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 131072

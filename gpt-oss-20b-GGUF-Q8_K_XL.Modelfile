@@ -1,0 +1,23 @@
+# ollama create config-gpt-oss-20b-GGUF-Q8_K_XL -f gpt-oss-20b-GGUF-Q8_K_XL.Modelfile
+# ollama create bb-config-gpt-oss-20b-GGUF-Q8_K_XL -f gpt-oss-20b-GGUF-Q8_K_XL.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/unsloth/gpt-oss-20b-GGUF:Q8_K_XL
+# We need to respond. The user question is simple: 1+1.
+# https://huggingface.co/unsloth/gpt-oss-20b-GGUF
+# Author: 
+# Size on disk: 
+# Size running: 14 GB
+#  architecture        gpt-oss    
+#  parameters          20.9B      
+#  context length      131072     
+#  embedding length    2880       
+#  quantization        Q8_0       
+
+#  context: 16,384 -> 131,072
+PARAMETER num_ctx 131072
+PARAMETER temperature 1.0
+PARAMETER top_k 100
+PARAMETER top_p 1.0
+PARAMETER stop "<|return|>"
+TEMPLATE """
+<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2025-08-05\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>user<|message|>Hello<|end|><|start|>assistant<|channel|>final<|message|>Hi there!<|end|><|start|>user<|message|>What is 1+1?<|end|><|start|>assistant
+"""

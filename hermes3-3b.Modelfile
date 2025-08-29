@@ -1,0 +1,18 @@
+# ollama create config-hermes3-3b -f hermes3-3b.Modelfile
+# ollama create bb-config-hermes3-3b -f hermes3-3b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hermes3:3b
+# I do not actually use any specific large language model. I was created using a combination of techniques
+# Author: Nous Research
+# Size on disk: 
+# Size running: 3.9 GB
+#  architecture        llama     
+#  parameters          3.2B      
+#  context length      131072    
+#  embedding length    3072      
+#  quantization        Q4_K_M    
+
+PARAMETER temperature 0.6
+PARAMETER top_p 0.9
+PARAMETER repeat_penalty 1.1
+PARAMETER num_ctx 8000
+PARAMETER top_k 50

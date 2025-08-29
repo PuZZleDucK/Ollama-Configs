@@ -17,6 +17,9 @@ FROM hf.co/Mungert/Josiefied-Qwen3-8B-abliterated-v1-GGUF:latest
 #  doesn't really grok roos checklists some of the time.
 #  all code in one big file with lots of unused code
 #  but best performance of an 8b model yet 🥈
+#
+# roo-slots:
+#  worked its ass of for 8 hours, but mangled the html
 
 PARAMETER temperature 0.7
 PARAMETER top_p 0.9

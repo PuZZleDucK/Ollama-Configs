@@ -11,6 +11,14 @@ FROM qwen3:14b
 #  embedding length    5120      
 #  quantization        Q4_K_M    
 
+# roo:
+#  orchestrator fell apart at about 41k
+# roo2:
+#  descent checklist but odd ordering... early tests tho
+#  ended up with a blank game and failing tests :(
+#  follow up to fix tests
+#  
+
 PARAMETER temperature 0.7
 PARAMETER top_p 0.8
 PARAMETER repeat_penalty 1.05

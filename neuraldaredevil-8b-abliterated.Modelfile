@@ -1,0 +1,47 @@
+
+# ollama create config-neuraldaredevil-8b-abliterated -f neuraldaredevil-8b-abliterated.Modelfile
+# ollama create bb-config-neuraldaredevil-8b-abliterated -f neuraldaredevil-8b-abliterated.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM closex/neuraldaredevil-8b-abliterated
+#  DPO fine-tune of mlabonne/Daredevil-8-abliterated, trained on mlabonne/orpo-dpo-mix-40k.
+#  The DPO fine-tuning successfully recovers the performance loss due to the abliteration
+# I'm a large language model (LLM) based on the Transformer architecture
+# Author: mlabonne 
+# Size on disk: 
+# Size running: 7.7 GB
+#  architecture        llama    
+#  parameters          8.0B     
+#  context length      8192     
+#  embedding length    4096     
+#  quantization        Q5_0     
+
+
+PARAMETER num_ctx 8192
+PARAMETER temperature 0.7
+PARAMETER stop "<|start_header_id|>"
+PARAMETER stop "<|end_header_id|>"
+PARAMETER stop "<|eot_id|>"
+PARAMETER num_keep 24
+
+
+
+# ollama rm config-daredevil-8b-abliterated
+# ollama rm hf.co/mlabonne/Daredevil-8B-abliterated-GGUF:latest
+#  # ollama create config-daredevil-8b-abliterated -f daredevil-8b-abliterated.Modelfile
+#  # ollama create bb-config-daredevil-8b-abliterated -f daredevil-8b-abliterated.Modelfile --system "$(cat optional_system_prompt.md)"
+#  FROM hf.co/mlabonne/Daredevil-8B-abliterated-GGUF:latest
+#  # I'm not sure which LLM model I am using. Can you help me identify it?
+#  # Author: MLabonne
+#  # Size on disk: 
+#  # Size running: 10 GB / 9.9 GB
+#  #  architecture        llama    
+#  #  parameters          8.0B     
+#  #  context length      8192     
+#  #  embedding length    4096     
+#  #  quantization        Q8_0     
+
+#  #  needs new stop definition?
+#  # roo:
+#  #  halucinated agents doing work
+
+#  PARAMETER temperature 0.7
+#  PARAMETER top_p 0.9

@@ -1,0 +1,20 @@
+# ollama create config-granite3-dense-8b -f granite3-dense-8b.Modelfile
+# ollama create bb-config-granite3-dense-8b -f granite3-dense-8b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM granite3-dense:8b
+# I am a language model developed by IBM in 2024. I don't have a specific LLM (Master of Laws) degree as I am not a human student
+# Author: IBM
+# Size on disk: 
+# Size running: 
+#  architecture        granite    
+#  parameters          8.2B       
+#  context length      4096       
+#  embedding length    4096       
+#  quantization        Q4_K_M     
+
+# roo:
+#  could not handle roo agents
+
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 131072

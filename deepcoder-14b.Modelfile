@@ -11,6 +11,14 @@ FROM deepcoder:14b
 #  embedding length    5120      
 #  quantization        Q4_K_M    
 
+# roo:
+#  ok plan
+#  has a new game screen
+#  recursive agents not returning?
+#  asks for files to be provided rather than reading
+#  seemed to get stuck in loops
+#  eventually failed
+
 PARAMETER temperature 0.6
 PARAMETER top_p 0.95
 PARAMETER num_predict 64000

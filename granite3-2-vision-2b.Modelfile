@@ -1,0 +1,16 @@
+# ollama create config-granite3-2-vision-2b -f granite3-2-vision-2b.Modelfile
+# ollama create bb-config-granite3-2-vision-2b -f granite3-2-vision-2b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM granite3.2-vision:2b
+# I am a model from the LLM (Master of Laws) category, which is a type of advanced legal education program
+# Author: IBM
+# Size on disk: 2.4 GB
+# Size running: 
+#  architecture        granite    
+#  parameters          2.5B       
+#  context length      16384      
+#  embedding length    2048       
+#  quantization        Q4_K_M     
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 131072

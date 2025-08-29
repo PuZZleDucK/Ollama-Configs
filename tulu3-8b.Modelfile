@@ -1,0 +1,15 @@
+# ollama create config-tulu3-8b -f tulu3-8b.Modelfile
+# ollama create bb-config-tulu3-8b -f tulu3-8b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM tulu3:8b
+# I am based on an open-source large language model called "Turing-NLG"
+# Author: 
+# Size on disk: 
+# Size running: 21 GB / 32 GB
+#  instruction following model family, offering fully open-source data, code, and recipes
+#  architecture        llama     
+#  parameters          8.0B      
+#  context length      131072    
+#  embedding length    4096      
+#  quantization        Q4_K_M    
+
+PARAMETER num_ctx 131072

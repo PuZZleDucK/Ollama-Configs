@@ -1,0 +1,26 @@
+# ollama create config-dolphin2-9-2-q8 -f dolphin2-9-2-q8.Modelfile
+# ollama create bb-config-dolphin2-9-2-q8 -f dolphin2-9-2-q8.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/dphn/dolphin-2.9.2-qwen2-7b-gguf:Q8_0
+# I am an AI developed using the GPT-3 (Generative Pretrained Transformer 3) model
+# Author: 
+# Size on disk: 
+# Size running: 12 GB
+# ollama show config-dolphin2-9-2-q8 && ollama run config-dolphin2-9-2-q8 "what llm model are you"
+#  architecture        qwen2     
+#  parameters          7.6B      
+#  context length      131072    
+#  embedding length    3584      
+#  quantization        Q8_0        
+
+# roo:
+#  created md checklist but then looped over it
+#  lots of questions
+#  can't return agents
+# roo slots
+#  recursivly created task
+
+PARAMETER temperature 0.6
+PARAMETER top_p 0.9
+PARAMETER num_ctx 32768
+PARAMETER num_predict 2048
+PARAMETER stop "<|im_end|>"

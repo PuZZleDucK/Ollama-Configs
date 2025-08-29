@@ -1,0 +1,22 @@
+# ollama create config-granite3-3-8b -f granite3-3-8b.Modelfile
+# ollama create bb-config-granite3-3-8b -f granite3-3-8b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM granite3.3:8b
+# I am based on a language model architecture known as the Learned Linear Layer Model (LLLM)
+# Author: IBM
+# Size on disk: 4.9 GB
+# Size running: 26 GB
+#  architecture        granite    
+#  parameters          8.2B       
+#  context length      131072     
+#  embedding length    4096       
+#  quantization        Q4_K_M     
+
+# roo:
+#  architect confused by todo tool
+#  looped over directory creation
+#  often seems to not write files it intended to
+#  fail
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 131072

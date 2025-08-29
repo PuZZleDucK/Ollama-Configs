@@ -1,0 +1,21 @@
+# ollama create config-gemma3-270m -f gemma3-270m.Modelfile
+# ollama create bb-config-gemma3-270m -f gemma3-270m.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM gemma3:270m
+# 
+# Author: Google
+# Size on disk: 
+# Size running: 1.4 GB
+#  architecture        gemma3     
+#  parameters          268.10M    
+#  context length      32768      
+#  embedding length    640        
+#  quantization        Q8_0       
+
+
+PARAMETER stop "<end_of_turn>"
+PARAMETER top_k 64
+PARAMETER top_p 0.95
+PARAMETER num_ctx 32000
+#  PARAMETER temperature 1.0
+#  PARAMETER min_p 0.0
+#  PARAMETER repeat_penalty 1.0

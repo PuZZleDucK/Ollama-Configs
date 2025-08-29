@@ -1,0 +1,37 @@
+# ollama create config-gpt-oss-20b -f gpt-oss-20b.Modelfile
+# ollama create bb-config-gpt-oss-20b -f gpt-oss-20b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM gpt-oss:20b
+# I’m powered by OpenAI’s GPT‑4 architecture—specifically the “ChatGPT‑4” model that’s been fine‑tuned for conversational use
+# Author: OpenAI
+# Size on disk: 
+# Size running: 15 GB
+# ollama show config-gpt-oss-20b && ollama run config-gpt-oss-20b "what llm model are you"
+#  architecture        gptoss    
+#  parameters          20.9B     
+#  context length      131072    
+#  embedding length    2880      
+#  quantization        MXFP4     
+#  "temperature": 1
+#  context lengths of up to 128k
+
+# Roo-html:
+#  cpu only :(
+#  api failures
+
+PARAMETER temperature 1
+#  0.6 - 0.9 better?
+PARAMETER num_ctx 131072
+
+#  remove chat template
+#  set propmp=prompt
+#  TEMPLATE """{{ .Prompt }}"""
+
+#  SYSTEM You are a concise coding assistant.
+#  TEMPLATE """{{ if .System }}{{ .System }} {{ end }}<!-- original --> {{ .Prompt }}"""
+#    #  • {{ .System }} – the system prompt (may be empty)
+#    #  • {{ .Prompt }} – the user prompt (single‑turn generate) or the last user message (chat)
+#    #  • {{ .Messages }} / {{ range .Messages }} – an array of all prior chat turns (only when you call /api/chat)
+#    #  • {{ .Response }} – marker indicating where the model’s answer should start (everything after it is thrown away during generation).
+#    #  Wrap sections with {{ if .System }} … {{ end }} or {{ if .Prompt }} so the block disappears when the variable is empty.
+
+

@@ -1,0 +1,17 @@
+# ollama create config-granite3-moe-3b -f granite3-moe-3b.Modelfile
+# ollama create bb-config-granite3-moe-3b -f granite3-moe-3b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM granite3-moe:3b
+# I am a model based on the Granite architecture, which was developed by IBM in 2024
+# Author: IBM
+# Size on disk: 
+# Size running: 2.3 GB
+#  architecture        granitemoe    
+#  parameters          3.4B          
+#  context length      4096          
+#  embedding length    1536          
+#  quantization        Q4_K_M        
+
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 131072

@@ -13,6 +13,8 @@ FROM hf.co/mlabonne/gemma-3-27b-it-abliterated-GGUF:Q4_K_M
 
 # Roo:
 #  api call issues
+# Roo-html:
+#  
 
 PARAMETER temperature 1.0
 PARAMETER top_p 0.95

@@ -10,6 +10,15 @@ FROM gemma3:12b
 #  context length      131072    
 #  embedding length    3840      
 #  quantization        Q4_K_M    
+
+# roo:
+#  detailed plan, but not a checklist
+#  plausible code... but does not run
+#  adding sound effects
+#  asking too many questions
+#  it's running again... nice map
+#  called it finished with just a map tho
+
 PARAMETER temperature 1.0
 PARAMETER top_p 0.95
 PARAMETER top_k 64

@@ -1,0 +1,26 @@
+# ollama create config-Qwen3-Coder-30B-A3B-Instruct-GGUF-Q3_K_XL -f Qwen3-Coder-30B-A3B-Instruct-GGUF-Q3_K_XL.Modelfile
+# ollama create bb-config-Qwen3-Coder-30B-A3B-Instruct-GGUF-Q3_K_XL -f Qwen3-Coder-30B-A3B-Instruct-GGUF-Q3_K_XL.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q3_K_XL
+# I am Qwen, a large-scale language model independently developed by Alibaba Group.
+#   https://huggingface.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF
+# Author: 
+# Size on disk: 
+# Size running: 26 GB
+#  architecture        qwen3moe    
+#  parameters          30.5B       
+#  context length      262144      
+#  embedding length    2048        
+#  quantization        Q3_K_M      
+
+#  Number of Parameters: 30.5B in total and 3.3B activated
+#  Number of Layers: 48
+#  Number of Attention Heads (GQA): 32 for Q and 4 for KV
+#  Number of Experts: 128
+#  Number of Activated Experts: 8
+#  Context Length: 262,144 natively.
+PARAMETER num_ctx 131072
+PARAMETER temperature 0.7
+PARAMETER top_p 0.8
+PARAMETER top_k 20
+PARAMETER repeat_penalty 1.05
+PARAMETER num_predict 65536

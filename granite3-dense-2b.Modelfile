@@ -1,0 +1,17 @@
+# ollama create config-granite3-dense-2b -f granite3-dense-2b.Modelfile
+# ollama create bb-config-granite3-dense-2b -f granite3-dense-2b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM granite3-dense:2b
+# I am based on the Llama 2 model developed by Meta
+# Author: IBM
+# Size on disk: 
+# Size running: 
+# ollama show config-granite3-dense-2b && ollama run config-granite3-dense-2b "what llm model are you"
+#  architecture        granite    
+#  parameters          2.6B       
+#  context length      4096       
+#  embedding length    2048       
+#  quantization        Q4_K_M     
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 131072

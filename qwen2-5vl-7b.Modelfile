@@ -1,19 +1,19 @@
-# ollama create config-qwen2-5vl-3b -f qwen2-5vl-3b.Modelfile
-# ollama create bb-config-qwen2-5vl-3b -f qwen2-5vl-3b.Modelfile --system "$(cat optional_system_prompt.md)"
-FROM qwen2.5vl:3b
+# ollama create config-qwen2-5vl-7b -f qwen2-5vl-7b.Modelfile
+# ollama create bb-config-qwen2-5vl-7b -f qwen2-5vl-7b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM qwen2.5vl:7b
 # I am a large language model created by Alibaba Cloud
 # Author: Alibaba (Qwen Team)
 # Size on disk: 
-# Size running: 10 GB
+# Size running: 13 GB
 #  architecture        qwen25vl    
-#  parameters          3.8B        
+#  parameters          8.3B        
 #  context length      128000      
-#  embedding length    2048        
+#  embedding length    3584        
 #  quantization        Q4_K_M      
 
 PARAMETER temperature 0.0001
 #  PARAMETER num_ctx 125000
-PARAMETER num_ctx 60000
+PARAMETER num_ctx 40000
 PARAMETER top_p 0.8
 PARAMETER repeat_penalty 1.05
 PARAMETER top_k 20

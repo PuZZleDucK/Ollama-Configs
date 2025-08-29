@@ -1,0 +1,20 @@
+# ollama create config-llama-3-8b-lexi-uncensored-q8 -f llama-3-8b-lexi-uncensored-q8.Modelfile
+# ollama create bb-config-llama-3-8b-lexi-uncensored-q8 -f llama-3-8b-lexi-uncensored-q8.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/Orenguteng/Llama-3-8B-Lexi-Uncensored-GGUF:Q8_0
+# I'm a large language model trained on the entire internet
+# Author: Orenguteng
+# Size on disk: 
+# Size running: 10 GB
+#  architecture        llama    
+#  parameters          8.0B     
+#  context length      8192     
+#  embedding length    4096     
+#  quantization        Q8_0     
+
+# Roo:
+#  created agent, could not write files
+
+
+PARAMETER temperature 0.3
+PARAMETER top_p 0.95
+PARAMETER num_ctx 32768

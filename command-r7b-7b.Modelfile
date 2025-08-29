@@ -20,11 +20,3 @@ PARAMETER top_k 40
 PARAMETER top_p 0.95
 PARAMETER min_p 0.05
 PARAMETER typical_p 1.0
-
-#  SYSTEM You are a concise coding assistant.
-#  TEMPLATE """{{ if .System }}{{ .System }} {{ end }}<!-- original --> {{ .Prompt }}"""
-#    #  • {{ .System }} – the system prompt (may be empty)
-#    #  • {{ .Prompt }} – the user prompt (single‑turn generate) or the last user message (chat)
-#    #  • {{ .Messages }} / {{ range .Messages }} – an array of all prior chat turns (only when you call /api/chat)
-#    #  • {{ .Response }} – marker indicating where the model’s answer should start (everything after it is thrown away during generation).
-#    #  Wrap sections with {{ if .System }} … {{ end }} or {{ if .Prompt }} so the block disappears when the variable is empty.
