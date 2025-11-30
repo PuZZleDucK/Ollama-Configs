@@ -9,7 +9,12 @@ FROM hf.co/DavidAU/L3.2-Rogue-Creative-Instruct-Uncensored-Abliterated-7B-GGUF:Q
 #  parameters          7.5B      
 #  context length      131072    
 #  embedding length    3072      
-#  quantization        Q8_0      
+#  quantization        Q8_0    
+
+#  codex:
+#  config-rogue-creative-instruct-uncensored:latest: tools supported  
+#  wrong format tool calls
+
 
 # roo:
 #  looped over agent creation

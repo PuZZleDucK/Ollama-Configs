@@ -7,6 +7,47 @@
 - Template.Modelfile contains paramater examples and clarifications
 
 
+
+# Codex config for ollama models
+
+check for tool use support via ollama:
+```
+for m in $(ollama list | grep config- | awk '{print $1}' | tail -n +2); do   echo -n "$m: ";   curl -s http://localhost:11434/v1/chat/completions     -H 'Content-Type: application/json'     -d "{
+      \"model\": \"$m\",
+      \"messages\": [{\"role\":\"user\",\"content\":\"hi\"}],
+      \"tools\": [{
+        \"type\":\"function\",                                                 
+        \"function\": {\"name\":\"ping\",\"parameters\":{\"type\":\"object\",\"properties\":{}}}
+      }]
+    }" | jq -r '.error.message // "tools supported"'; done
+```
+
+
+add ollama provider and model(s) the codex config file (~/.codex/config.toml):
+```
+[model_providers.ollama]
+name     = "Ollama"
+base_url = "http://localhost:11434/v1"
+
+[profiles.ollama-gpt-oss-20b]
+model_provider = "ollama"
+model = "config-gpt-oss-20b"
+```
+
+
+running codex cli usually requires `--sandbox danger-full-access` or `--yolo` to not trip up the model with permissions.
+```
+codex exec --skip-git-repo-check --sandbox danger-full-access --profile config-gpt-oss-20b "describe the current codebase"
+```
+
+working profiles:
+- ollama-gpt-oss-20b
+- ollama-josiefied-qwen3 (mungert)
+- ollama-qwen2-5-7b, ollama-qwen2-5-14b
+- ollama-qwen3-1-7b, ollama-qwen3-4b, ollama-qwen3-8b, ollama-qwen3-8b, ollama-qwen3-14b
+- 
+
+
 # Other Useful Ollama Stuff
 
 ### sort models alpha

@@ -42,4 +42,12 @@ PARAMETER presence_penalty 1.5
 #    #  • {{ .Response }} – marker indicating where the model’s answer should start (everything after it is thrown away during generation).
 #    #  Wrap sections with {{ if .System }} … {{ end }} or {{ if .Prompt }} so the block disappears when the variable is empty.
 
+#  multiline template
+#  TEMPLATE """
+#  <|system|>
+#  {system_message}</s>
+#  <|user|>
+#  {prompt}</s>
+#  <|assistant|>
+#  """
 
