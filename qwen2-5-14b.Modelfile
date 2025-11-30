@@ -11,6 +11,10 @@ FROM qwen2.5:14b
 #  embedding length    5120      
 #  quantization        Q4_K_M    
 
+#  codex:
+#  config-qwen2-5-14b:latest: tools supported
+#  good tool use - detailed, examined example model file
+
 PARAMETER temperature 0.7
 PARAMETER top_p 0.8
 PARAMETER num_ctx 131072

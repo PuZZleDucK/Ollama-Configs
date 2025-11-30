@@ -11,6 +11,12 @@ FROM qwen2.5:7b
 #  embedding length    3584      
 #  quantization        Q4_K_M    
 
+#  codex:
+#  config-qwen2-5-7b:latest: tools supported
+#  successfull tool calls - used tree :D
+#  decent summary
+
+
 PARAMETER temperature 0.7
 PARAMETER top_p 0.8
 PARAMETER num_ctx 131072

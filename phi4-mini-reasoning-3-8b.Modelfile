@@ -4,7 +4,7 @@ FROM phi4-mini-reasoning:3.8b
 # 
 # Author: Microsoft Research
 # Size on disk: 
-# Size running: 
+# Size running: 10 GB    100% GPU
 #  architecture        phi3      
 #  parameters          3.8B      
 #  context length      131072    

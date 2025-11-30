@@ -11,6 +11,12 @@ FROM hf.co/Orenguteng/Llama-3.1-8B-Lexi-Uncensored-V2-GGUF:latest
 #  embedding length    4096      
 #  quantization        F16       
 
+#  codex:
+#  config-llama-3-1-8b-lexi-uncensored:latest: tools supported
+#  errors in tool calls
+#  "but the amount of work it is going to take to learn this stuff seems overwhelming." :D
+#  looked at git history but not the files :p
+
 # Roo:
 #  can call agents but misuses todo lists.
 #  writes a simple plan

@@ -4,7 +4,7 @@ FROM phi4-reasoning:plus
 # 
 # Author: Microsoft Research
 # Size on disk: 11 GB
-# Size running: 22 GB
+# Size running: 22 GB  48%/52% CPU/GPU
 #  architecture        phi3      
 #  parameters          14.7B     
 #  context length      32768     

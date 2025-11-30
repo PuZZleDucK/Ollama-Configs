@@ -11,6 +11,11 @@ FROM qwen3:1.7b
 #  embedding length    2048      
 #  quantization        Q4_K_M    
 
+#  codex:
+#  config-qwen3-1-7b:latest: tools supported
+#  listed files - decent summary
+#  thinking block
+
 PARAMETER temperature 0.7
 PARAMETER top_p 0.8
 PARAMETER repeat_penalty 1.05

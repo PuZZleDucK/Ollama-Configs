@@ -11,6 +11,10 @@ FROM mistral-small3.1:24b
 #  embedding length    5120        
 #  quantization        Q4_K_M      
 
+#  codex:
+#  config-mistral-small3-1-24b:latest: tools supported
+#  invalid tool calls
+
 PARAMETER temperature 0.7
 PARAMETER top_p 0.9
 PARAMETER num_predict 4096

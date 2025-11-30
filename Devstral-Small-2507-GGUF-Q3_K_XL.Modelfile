@@ -22,7 +22,7 @@ FROM hf.co/unsloth/Devstral-Small-2507-GGUF:Q3_K_XL
 
 # roo:
 #  updated agents.md!!! - great start
-#  
+#  trouble getting jest tests passing
 
 
 

@@ -1,0 +1,22 @@
+# ollama create config-Qwen3-30B-A3B-Thinking-2507-Deepseek-v3-1-Distill-V2-Q3_K_M -f Qwen3-30B-A3B-Thinking-2507-Deepseek-v3-1-Distill-V2-Q3_K_M.Modelfile
+# ollama create bb-config-Qwen3-30B-A3B-Thinking-2507-Deepseek-v3-1-Distill-V2-Q3_K_M -f Qwen3-30B-A3B-Thinking-2507-Deepseek-v3-1-Distill-V2-Q3_K_M.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/BasedBase/Qwen3-30B-A3B-Thinking-2507-Deepseek-v3.1-Distill-V2:Q3_K_M
+# I am **Qwen**, a large language model developed by **Tongyi Lab** (part of Alibaba Group)
+# Author: BasedBase
+# Size on disk: 
+# Size running: 
+# 
+#  architecture        qwen3moe    
+#  parameters          30.5B       
+#  context length      262144      
+#  embedding length    2048        
+#  quantization        Q3_K_M      
+#  Teacher Model: deepseek-ai/DeepSeek-V3.1.
+#  Student Model: Qwen/Qwen3-30B-A3B-Thinking-2507.
+
+
+PARAMETER num_ctx 262144
+PARAMETER temperature 0.6
+PARAMETER min_p 0.0
+PARAMETER top_p 0.95
+PARAMETER top_k 20

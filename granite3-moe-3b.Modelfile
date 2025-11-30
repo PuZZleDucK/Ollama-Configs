@@ -11,6 +11,10 @@ FROM granite3-moe:3b
 #  embedding length    1536          
 #  quantization        Q4_K_M        
 
+#  codex:
+#  config-granite3-moe-3b:latest: tools supported
+#  no tool calls
+
 
 PARAMETER temperature 0.7
 PARAMETER top_p 0.9

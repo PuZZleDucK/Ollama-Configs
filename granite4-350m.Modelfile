@@ -1,0 +1,15 @@
+# ollama create config-granite4-350m -f granite4-350m.Modelfile
+# ollama create bb-config-granite4-350m -f granite4-350m.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM granite4:350m
+# I am an AI language model developed by IBM Research
+# Author: IBM
+# Size on disk: 
+# Size running: 2.3 GB    100% GPU - with 1b also loaded :p
+# ollama show config-granite4-350m && ollama run config-granite4-350m "what llm model are you"
+#  architecture        granite    
+#  parameters          352.38M    
+#  context length      32768      
+#  embedding length    1024       
+#  quantization        BF16       
+
+PARAMETER num_ctx 32768

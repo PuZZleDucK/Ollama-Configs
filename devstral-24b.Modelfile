@@ -12,6 +12,11 @@ FROM devstral:24b
 #  embedding length    5120      
 #  quantization        Q4_K_M    
 
+#  codex:
+#  config-devstral-24b:latest: tools supported
+#  responds with continuation, but errors in tool calls
+#  or denied even having tools :p
+
 # roo:
 #  clear architech instructions
 #  good architech checklist (and actually a checklist)

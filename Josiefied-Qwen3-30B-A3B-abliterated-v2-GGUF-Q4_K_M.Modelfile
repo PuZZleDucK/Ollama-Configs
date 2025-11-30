@@ -1,0 +1,24 @@
+# ollama create config-Josiefied-Qwen3-30B-A3B-abliterated-v2-GGUF-Q4_K_M -f Josiefied-Qwen3-30B-A3B-abliterated-v2-GGUF-Q4_K_M.Modelfile
+# ollama create bb-config-Josiefied-Qwen3-30B-A3B-abliterated-v2-GGUF-Q4_K_M -f Josiefied-Qwen3-30B-A3B-abliterated-v2-GGUF-Q4_K_M.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/mradermacher/Josiefied-Qwen3-30B-A3B-abliterated-v2-GGUF:Q4_K_M
+# def run_qwen_inference(model, tokenizer, system_message, user_prompt):
+# I remember that I am Qwen, developed by Alibaba Cloud. But the specific version might vary. Wait, there have been several versions 
+# Author: mradermacher
+# Size on disk: 18 GB
+# Size running: 28 GB    58%/42% CPU/GPU
+# ollama show config-Josiefied-Qwen3-30B-A3B-abliterated-v2-GGUF-Q4_K_M && ollama run config-Josiefied-Qwen3-30B-A3B-abliterated-v2-GGUF-Q4_K_M "what llm model are you"
+#  parameters          30.5B       
+#  context length      40960       
+#  embedding length    2048        
+#  quantization        Q4_K_M      
+
+PARAMETER num_ctx 40960
+#  PARAMETER num_predict 6144
+#  TEMPLATE """
+#  <|system|>
+#  {system_message}</s>
+#  <|user|>
+#  {prompt}</s>
+#  <|assistant|>
+#  """
+

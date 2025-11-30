@@ -4,12 +4,19 @@ FROM qwen3:14b
 # 
 # Author: Alibaba (Qwen Team)
 # Size on disk: 
-# Size running: 21 GB
+# Size running: 21 GB  45%/55% CPU/GPU
 #  architecture        qwen3     
 #  parameters          14.8B     
 #  context length      40960     
 #  embedding length    5120      
 #  quantization        Q4_K_M    
+
+#  codex:
+#  config-qwen3-14b:latest: tools supported
+#  all good, even looked for a licence
+#  html game test:
+
+#  weak refusal
 
 # roo:
 #  orchestrator fell apart at about 41k

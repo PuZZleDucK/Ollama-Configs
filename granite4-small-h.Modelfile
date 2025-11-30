@@ -1,0 +1,16 @@
+# ollama create config-granite4-small-h -f granite4-small-h.Modelfile
+# ollama create bb-config-granite4-small-h -f granite4-small-h.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM granite4:small-h
+# I am a large language model developed by IBM for enterprise use cases
+# Author: 
+# Size on disk: 
+# Size running: 26 GB    43%/57% CPU/GPU
+# ollama show config-granite4-small-h && ollama run config-granite4-small-h "what llm model are you"
+#  architecture        granitehybrid    
+#  parameters          32.2B            
+#  context length      1048576          
+#  embedding length    4096             
+#  quantization        Q4_K_M           
+#  Error: 500 Internal Server Error: llama runner process has terminated: cudaMalloc failed: out of memory
+PARAMETER num_ctx 48576
+# 1M context

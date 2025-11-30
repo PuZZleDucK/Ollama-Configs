@@ -1,0 +1,12 @@
+# ollama create config-MythoMax-L2-13B-GGUF-Q8_0 -f MythoMax-L2-13B-GGUF-Q8_0.Modelfile
+# ollama create bb-config-MythoMax-L2-13B-GGUF-Q8_0 -f MythoMax-L2-13B-GGUF-Q8_0.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/TheBloke/MythoMax-L2-13B-GGUF:Q8_0
+# 
+# Author: 
+# Size on disk: 
+# Size running: 
+# ollama show config-MythoMax-L2-13B-GGUF-Q8_0 && ollama run config-MythoMax-L2-13B-GGUF-Q8_0 "what llm model are you"
+
+PARAMETER temperature 0.7
+PARAMETER repeat_penalty 1.1
+PARAMETER num_predict 4096

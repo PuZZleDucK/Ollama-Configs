@@ -1,0 +1,16 @@
+# ollama create config-granite4-micro-h -f granite4-micro-h.Modelfile
+# ollama create bb-config-granite4-micro-h -f granite4-micro-h.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM granite4:micro-h
+# I am designed to be a large language model (LLM) built by IBM Research
+# Author: 
+# Size on disk: 
+# Size running: 10 GB    100% CPU
+# ollama show config-granite4-micro-h && ollama run config-granite4-micro-h "what llm model are you"
+#  architecture        granitehybrid    
+#  parameters          3.2B             
+#  context length      1048576          
+#  embedding length    2048             
+#  quantization        Q4_K_M           
+
+PARAMETER num_ctx 1048576
+# 1M context

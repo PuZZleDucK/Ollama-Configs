@@ -11,6 +11,10 @@ FROM qwen3:0.6b
 #  embedding length    1024       
 #  quantization        Q4_K_M     
 
+#  codex:
+#  config-qwen3-0-6b:latest: tools supported
+#  no tool calls
+
 PARAMETER temperature 0.7
 PARAMETER top_p 0.8
 PARAMETER repeat_penalty 1.05

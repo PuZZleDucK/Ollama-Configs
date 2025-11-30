@@ -4,7 +4,7 @@ FROM gpt-oss:20b
 # I’m powered by OpenAI’s GPT‑4 architecture—specifically the “ChatGPT‑4” model that’s been fine‑tuned for conversational use
 # Author: OpenAI
 # Size on disk: 
-# Size running: 15 GB
+# Size running: 15 GB - 17 GB    31%/69% CPU/GPU
 # ollama show config-gpt-oss-20b && ollama run config-gpt-oss-20b "what llm model are you"
 #  architecture        gptoss    
 #  parameters          20.9B     
@@ -13,6 +13,13 @@ FROM gpt-oss:20b
 #  quantization        MXFP4     
 #  "temperature": 1
 #  context lengths of up to 128k
+
+#  codex:
+#  config-gpt-oss-20b:latest: tools supported
+#  called tools:
+#  [2025-09-08T12:32:11] exec bash -lc 'ls -R' in /home/puzzleduck/Nextcloud/x/AI/ollama
+#  [2025-09-08T12:32:11] bash -lc 'ls -R' succeeded in 262ms:
+#  + continued response - gold standard
 
 # Roo-html:
 #  cpu only :(

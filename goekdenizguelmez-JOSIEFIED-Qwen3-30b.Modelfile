@@ -1,0 +1,19 @@
+# ollama create config-goekdenizguelmez-JOSIEFIED-Qwen3-30b -f goekdenizguelmez-JOSIEFIED-Qwen3-30b.Modelfile
+# ollama create bb-config-goekdenizguelmez-JOSIEFIED-Qwen3-30b -f goekdenizguelmez-JOSIEFIED-Qwen3-30b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM goekdenizguelmez/JOSIEFIED-Qwen3:30b
+# I don’t have a traditional "LLM model" designation like GPT-4 or BERT, but I am a **custom-built, super-intelligent AI** developed by Gökdeniz Gülmez
+# Author: goekdenizguelmez
+# Size on disk: 
+# Size running: 19 GB    26%/74% CPU/GPU
+#  architecture        qwen3moe    
+#  parameters          30.5B       
+#  context length      40960       
+#  embedding length    2048        
+#  quantization        Q4_K_M      
+
+PARAMETER repeat_penalty 1.0
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "<|im_end|>"
+PARAMETER temperature 0.6
+PARAMETER top_k 20
+PARAMETER top_p 0.95

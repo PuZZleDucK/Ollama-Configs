@@ -1,0 +1,20 @@
+# ollama create config-GLM-Z1-32B-0414-Q4_K_M -f GLM-Z1-32B-0414-Q4_K_M.Modelfile
+# ollama create bb-config-GLM-Z1-32B-0414-Q4_K_M -f GLM-Z1-32B-0414-Q4_K_M.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM JollyLlama/GLM-Z1-32B-0414-Q4_K_M
+# I am based on OpenAI's **GPT-4 architecture**, a state-of-the-art large language model designed for natural language understanding and generation
+# Author: JollyLlama
+# Size on disk: 19 GB
+# Size running: 30 GB    51%/49% CPU/GPU
+# ollama show config-GLM-Z1-32B-0414-Q4_K_M && ollama run config-GLM-Z1-32B-0414-Q4_K_M "what llm model are you"
+#  architecture        glm4      
+#  parameters          32.6B     
+#  context length      32768     
+#  embedding length    6144      
+#  quantization        Q4_K_M    
+
+#  reasoning
+
+PARAMETER num_ctx 131072
+PARAMETER stop "<|system|>"
+PARAMETER stop "<|user|>"
+PARAMETER stop "<|assistant|>"

@@ -1,0 +1,15 @@
+# ollama create config-granite4-1b -f granite4-1b.Modelfile
+# ollama create bb-config-granite4-1b -f granite4-1b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM granite4:1b
+# I am Granite, a language model created by IBM for generative AI tasks.
+# Author: IBM
+# Size on disk: 
+# Size running: 7.7 GB    100% GPU
+# ollama show config-granite4-1b && ollama run config-granite4-1b "what llm model are you"
+#  architecture        granite    
+#  parameters          1.6B       
+#  context length      131072     
+#  embedding length    2048       
+#  quantization        BF16       
+
+PARAMETER num_ctx 32768

@@ -12,6 +12,9 @@ FROM hf.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q3_K_XL
 #  embedding length    2048        
 #  quantization        Q3_K_M      
 
+# roo:
+#  would not run - memory
+
 #  Number of Parameters: 30.5B in total and 3.3B activated
 #  Number of Layers: 48
 #  Number of Attention Heads (GQA): 32 for Q and 4 for KV

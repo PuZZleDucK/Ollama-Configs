@@ -11,6 +11,11 @@ FROM mistral-small3.2:24b
 #  embedding length    5120        
 #  quantization        Q4_K_M      
 
+#  codex:
+#  config-mistral-small3-2-24b:latest: tools supported
+#  lots of tool calls - most failures
+#  really wants an AGENTS.md file
+
 # roo:
 #  did call an agent but went haywire
 #  made a game window in second run

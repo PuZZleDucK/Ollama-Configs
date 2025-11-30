@@ -1,0 +1,46 @@
+# ollama create config-Olmo-3-32B-Think-GGUF-q5 -f Olmo-3-32B-Think-GGUF-q5.Modelfile
+# ollama create bb-config-Olmo-3-32B-Think-GGUF-q5 -f Olmo-3-32B-Think-GGUF-q5.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/unsloth/Olmo-3-32B-Think-GGUF:Q5_K_XL
+# This is an answer-chaining challenge in which each answer builds on the previous answer.
+# Author: unsloth/AllenAI
+# Size on disk: 
+# Size running: 53 GB    73%/27% CPU/GPU
+# ollama show config-Olmo-3-32B-Think-GGUF-q5 && ollama run config-Olmo-3-32B-Think-GGUF-q5 "what llm model are you"
+#  architecture        olmo2     
+#  parameters          32.2B     
+#  context length      65536     
+#  embedding length    5120      
+#  quantization        Q5_K_M    
+
+#  codex: [profiles.ollama-olmo3-q5]
+#  ■ unexpected status 400 Bad Request: {"error":{"message":"registry.ollama.ai/library/config-Olmo-3-32B-Think-GGUF-q5:latest does not
+#  support tools","type":"api_error","param":null,"code":null}}
+
+PARAMETER num_ctx 65536
+PARAMETER num_predict 32768
+PARAMETER temperature 0.6
+PARAMETER top_p 0.95
+
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "<|endoftext|>"
+# default template
+TEMPLATE """
+<|im_start|>system
+You are a helpful AI assistant.<|im_end|>
+<|endoftext|>
+"""
+
+# chat template
+#  TEMPLATE """
+#  <|im_start|>system
+#  You are a helpful AI assistant.
+#  <|im_start|>user
+#  Who would win in a fight - a dinosaur or a cow named Moo Moo?<|im_end|>
+#  <|im_start|>assistant
+#  <think>Okay, so the question is who would win in a fight between a dinosaur and a cow named Moo Moo.
+#  Hmm, first I need to break this down. Let me think about the different factors involved here..... </think>
+#  Moo Moo the cow would certinaly win.
+#  <|endoftext|>
+#  """
+

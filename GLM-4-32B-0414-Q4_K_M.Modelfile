@@ -1,0 +1,20 @@
+# ollama create config-GLM-4-32B-0414-Q4_K_M -f GLM-4-32B-0414-Q4_K_M.Modelfile
+# ollama create bb-config-GLM-4-32B-0414-Q4_K_M -f GLM-4-32B-0414-Q4_K_M.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM JollyLlama/GLM-4-32B-0414-Q4_K_M
+# I'm an AI assistant based on the NLP model.
+# Author: JollyLlama
+# Size on disk: 19 GB
+# Size running: 
+# ollama show config-GLM-4-32B-0414-Q4_K_M && ollama run config-GLM-4-32B-0414-Q4_K_M "what llm model are you"
+#  architecture        glm4      
+#  parameters          32.6B     
+#  context length      32768     
+#  embedding length    6144      
+#  quantization        Q4_K_M    
+
+# instruct
+
+PARAMETER num_ctx 131072
+PARAMETER stop "<|system|>"
+PARAMETER stop "<|user|>"
+PARAMETER stop "<|assistant|>"

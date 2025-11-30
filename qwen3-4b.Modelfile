@@ -5,11 +5,17 @@ FROM qwen3:4b
 # Author: Alibaba (Qwen Team)
 # Size on disk: 
 # Size running: 13 GB
-    #  architecture        qwen3     
-    #  parameters          4.0B      
-    #  context length      40960     
-    #  embedding length    2560      
-    #  quantization        Q4_K_M    
+
+#  architecture        qwen3     
+#  parameters          4.0B      
+#  context length      40960     
+#  embedding length    2560      
+#  quantization        Q4_K_M    
+
+#  codex:
+#  config-qwen3-4b:latest: tools supported
+#  tools, thinking, all the good stuff
+
 
 PARAMETER temperature 0.7
 PARAMETER top_p 0.8

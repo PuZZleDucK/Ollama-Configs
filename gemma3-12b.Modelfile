@@ -4,7 +4,7 @@ FROM gemma3:12b
 # I'm Gemma, a large language model created by the Gemma team at Google DeepMind.
 # Author: Google
 # Size on disk: 
-# Size running: 24 GB
+# Size running: 24 GB - 26 GB    61%/39% CPU/GPU
 #  architecture        gemma3    
 #  parameters          12.2B     
 #  context length      131072    

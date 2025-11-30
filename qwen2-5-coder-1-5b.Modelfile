@@ -11,6 +11,11 @@ FROM qwen2.5-coder:1.5b
 #  embedding length    1536      
 #  quantization        Q4_K_M    
 
+#  codex:
+#  config-qwen2-5-coder-1-5b:latest: tools supported
+#  tried to call tools but wrong format
+
+
 PARAMETER temperature 0.7
 PARAMETER top_p 0.8
 PARAMETER repeat_penalty 1.05

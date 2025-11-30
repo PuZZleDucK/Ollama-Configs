@@ -10,7 +10,13 @@ FROM hf.co/unsloth/gpt-oss-20b-GGUF:Q8_K_XL
 #  parameters          20.9B      
 #  context length      131072     
 #  embedding length    2880       
-#  quantization        Q8_0       
+#  quantization        Q8_0   
+#  no tool use
+#  stream error: unexpected status 400 Bad Request: {"error":{"message":"registry.ollama.ai/library/config-gpt-oss-20b-GGUF-Q8_K_XL:latest does not support tools
+
+# roo:
+#  hell of a plan in chat... thinking about chaining agents
+#  couldn't use todo list tho
 
 #  context: 16,384 -> 131,072
 PARAMETER num_ctx 131072
@@ -18,6 +24,12 @@ PARAMETER temperature 1.0
 PARAMETER top_k 100
 PARAMETER top_p 1.0
 PARAMETER stop "<|return|>"
+#  fixed prompt template to remove static text
+#  replace system component with `{{ if .System }}{{ .System }}` ?
+#  and cleanup fluff pre-chat
 TEMPLATE """
-<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2025-08-05\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>user<|message|>Hello<|end|><|start|>assistant<|channel|>final<|message|>Hi there!<|end|><|start|>user<|message|>What is 1+1?<|end|><|start|>assistant
+<|start|>{{ if .System }}{{ .System }} {{ end }}<|start|>user<|message|>{{ .Prompt }}<|end|><|start|>assistant
 """
+#  TEMPLATE """
+#  <|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2025-08-05\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>user<|message|>Hello<|end|><|start|>assistant<|channel|>final<|message|>Hi there!<|end|><|start|>user<|message|>{{ .Prompt }}<|end|><|start|>assistant
+#  """

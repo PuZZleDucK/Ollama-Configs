@@ -11,6 +11,12 @@ FROM hf.co/Mungert/Josiefied-Qwen3-8B-abliterated-v1-GGUF:latest
 #  embedding length    4096      
 #  quantization        Q4_K_M    
 
+#  codex:
+#  config-mungert-josiefied-qwen3-8b:latest: tools supported
+#  called tools and responded with contiunuation and thinking block
+#  good summary - gold star
+
+
 # roo: 
 #  can handle prompt and create agents.
 #  didn't plan much, overly simple.

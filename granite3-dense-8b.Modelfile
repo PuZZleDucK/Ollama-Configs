@@ -11,6 +11,11 @@ FROM granite3-dense:8b
 #  embedding length    4096       
 #  quantization        Q4_K_M     
 
+#  codex:
+#  config-granite3-dense-2b:latest: tools supported
+#  no tool calls, just context
+
+
 # roo:
 #  could not handle roo agents
 

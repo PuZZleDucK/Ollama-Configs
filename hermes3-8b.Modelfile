@@ -11,6 +11,10 @@ FROM hermes3:8b
 #  embedding length    4096      
 #  quantization        Q4_0      
 
+#  codex:
+#  config-hermes3-8b:latest: tools supported
+#  invalid tool calls - better :p
+
 PARAMETER temperature 0.8
 PARAMETER top_p 0.9
 PARAMETER repeat_penalty 1.1

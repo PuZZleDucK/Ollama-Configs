@@ -11,6 +11,10 @@ FROM qwen2.5:3b
 #  embedding length    2048      
 #  quantization        Q4_K_M    
 
+#  codex:
+#  config-qwen2-5-3b:latest: tools supported
+#  failed or no tool calls
+
 PARAMETER temperature 0.7
 PARAMETER top_p 0.8
 PARAMETER num_ctx 131072

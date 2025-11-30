@@ -12,6 +12,10 @@ FROM granite3-dense:2b
 #  embedding length    2048       
 #  quantization        Q4_K_M     
 
+#  codex:
+#  config-granite3-dense-8b:latest: tools supported
+#  does not use tools, just looking at project context dir
+
 PARAMETER temperature 0.7
 PARAMETER top_p 0.9
 PARAMETER num_ctx 131072

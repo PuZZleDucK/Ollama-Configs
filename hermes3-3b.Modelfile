@@ -11,6 +11,10 @@ FROM hermes3:3b
 #  embedding length    3072      
 #  quantization        Q4_K_M    
 
+#  codex:
+#  config-hermes3-3b:latest: tools supported
+#  no tool calls
+
 PARAMETER temperature 0.6
 PARAMETER top_p 0.9
 PARAMETER repeat_penalty 1.1

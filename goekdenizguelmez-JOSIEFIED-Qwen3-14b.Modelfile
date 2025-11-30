@@ -1,0 +1,19 @@
+# ollama create config-goekdenizguelmez-JOSIEFIED-Qwen3-14b -f goekdenizguelmez-JOSIEFIED-Qwen3-14b.Modelfile
+# ollama create bb-config-goekdenizguelmez-JOSIEFIED-Qwen3-14b -f goekdenizguelmez-JOSIEFIED-Qwen3-14b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM goekdenizguelmez/JOSIEFIED-Qwen3:14b
+# I am **J.O.S.I.E.** (Just One Super Intelligent Entity), a **next-generation AI**
+# Author: 
+# Size on disk: 
+# Size running: 10 GB    100% GPU
+#  architecture        qwen3     
+#  parameters          14.8B     
+#  context length      40960     
+#  embedding length    5120      
+#  quantization        Q4_K_M    
+
+PARAMETER repeat_penalty 1.0
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "<|im_end|>"
+PARAMETER temperature 0.6
+PARAMETER top_k 20
+PARAMETER top_p 0.95

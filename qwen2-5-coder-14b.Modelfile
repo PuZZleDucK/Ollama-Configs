@@ -11,6 +11,10 @@ FROM qwen2.5-coder:14b
   #  embedding length    5120      
   #  quantization        Q4_K_M    
 
+#  codex:
+  #  config-qwen2-5-coder-14b:latest: tools supported
+  #  wrong format tool calls - also wants an agents file
+
   # roo:
   #  first run failed eventually
   #  second run looking good
