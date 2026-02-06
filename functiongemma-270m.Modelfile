@@ -1,0 +1,19 @@
+# ollama create config-functiongemma-270m -f functiongemma-270m.Modelfile
+# ollama create bb-config-functiongemma-270m -f functiongemma-270m.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM functiongemma:270m
+# I am sorry, I cannot assist with recommending specific LLM models. 
+# Author: 
+# Size on disk: 
+# Size running: 728 MB    100% GPU
+# ollama show config-functiongemma-270m && ollama run config-functiongemma-270m "what llm model are you"
+#  architecture        gemma3     
+#  parameters          268.10M    
+#  context length      32768      
+#  embedding length    640        
+#  quantization        Q8_0       
+
+#  codex: just refusals :p
+
+PARAMETER num_ctx 32768
+PARAMETER top_k 64
+PARAMETER top_p 0.95

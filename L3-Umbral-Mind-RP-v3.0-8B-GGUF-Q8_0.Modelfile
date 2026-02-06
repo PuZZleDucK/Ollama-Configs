@@ -1,0 +1,22 @@
+# ollama create config-L3-Umbral-Mind-RP-v3.0-8B-GGUF-Q8_0 -f L3-Umbral-Mind-RP-v3.0-8B-GGUF-Q8_0.Modelfile
+# ollama create bb-config-L3-Umbral-Mind-RP-v3.0-8B-GGUF-Q8_0 -f L3-Umbral-Mind-RP-v3.0-8B-GGUF-Q8_0.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/backyardai/L3-Umbral-Mind-RP-v3.0-8B-GGUF:Q8_0
+# 
+# Author: Casual-Autopsy
+# Size on disk: 8.5 GB
+# Size running: 
+# ollama show config-L3-Umbral-Mind-RP-v3.0-8B-GGUF-Q8_0 && ollama run config-L3-Umbral-Mind-RP-v3.0-8B-GGUF-Q8_0 "what llm model are you"
+
+
+PARAMETER num_ctx 131072
+#  PARAMETER temperature 0.3
+
+#  rp template
+#  TEMPLATE """
+#  {% set loop_messages = messages %}{% for message in loop_messages %}{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>
+
+#  '+ message['content'] | trim + '<|eot_id|>' %}{% if loop.index0 == 0 %}{% set content = bos_token + content %}{% endif %}{{ content }}{% endfor %}{% if add_generation_prompt %}{{ '<|start_header_id|>assistant<|end_header_id|>
+
+#  ' }}{% endif %}
+#  """
+

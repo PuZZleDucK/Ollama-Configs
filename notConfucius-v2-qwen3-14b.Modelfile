@@ -1,0 +1,25 @@
+# ollama create config-notConfucius-v2-qwen3-14b -f notConfucius-v2-qwen3-14b.Modelfile
+# ollama create bb-config-notConfucius-v2-qwen3-14b -f notConfucius-v2-qwen3-14b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM chenzo/notConfucius.v2.qwen3-14b:latest
+# I am a fine-tuned GPT-3.5 model with 175B parameters
+# Author: chenzo
+# Size on disk: 
+# Size running: 21 GB    90%/10% CPU/GPU
+# ollama show config-notConfucius-v2-qwen3-14b && ollama run config-notConfucius-v2-qwen3-14b "what llm model are you"
+#  architecture        qwen3    
+#  parameters          14.8B    
+#  context length      32768    
+#  embedding length    5120     
+#  quantization        Q8_0     
+
+#  codex: no tool use
+
+PARAMETER num_ctx 32768
+PARAMETER stop "### Instruction:"
+PARAMETER stop "\\n### Instruction:"
+PARAMETER stop "### Response:"
+PARAMETER stop "\\n### Response:""
+PARAMETER stop "Below is an instruction"
+PARAMETER stop "\\nBelow is an instruction"
+PARAMETER stop "<|end_of_text|>"
+PARAMETER stop "</s>"

@@ -1,0 +1,22 @@
+# ollama create config-olmo-3-1-32b -f olmo-3-1-32b.Modelfile
+# ollama create bb-config-olmo-3-1-32b -f olmo-3-1-32b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM olmo-3.1:32b
+# I am Olmo, a large language model (LLM) built by Ai2
+# Author: 
+# Size on disk: 
+# Size running: 25 GB    62%/38% CPU/GPU
+# ollama show config-olmo-3-1-32b && ollama run config-olmo-3-1-32b "what llm model are you"
+#  thinking
+#  looped over thoughts for ages for a simple hello, slowly stumbling though self identification and definitions of words...
+#  keeps wondering if it's a 7b model :p
+#  architecture        olmo3     
+#  parameters          32.2B     
+#  context length      65536     
+#  embedding length    5120      
+#  quantization        Q4_K_M    
+
+#  codex: no tool use
+
+PARAMETER num_ctx 65536
+PARAMETER temperature 0.6
+PARAMETER top_p 0.95
