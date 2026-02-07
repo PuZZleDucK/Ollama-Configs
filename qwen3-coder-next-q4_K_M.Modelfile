@@ -1,0 +1,20 @@
+# ollama create config-qwen3-coder-next-q4_K_M -f qwen3-coder-next-q4_K_M.Modelfile
+# ollama create bb-config-qwen3-coder-next-q4_K_M -f qwen3-coder-next-q4_K_M.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM qwen3-coder-next:q4_K_M
+# I am **Qwen3**, the latest large language model launched by Alibaba in 2024
+# Author: 
+# Size on disk: 
+# Size running: 58 GB    94%/6% CPU/GPU
+# ollama show config-qwen3-coder-next-q4_K_M && ollama run config-qwen3-coder-next-q4_K_M "what llm model are you"
+#  architecture        qwen3next    
+#  parameters          79.7B        
+#  context length      262144       
+#  embedding length    2048         
+#  quantization        Q4_K_M       
+#  requires            0.15.5       
+
+PARAMETER temperature 1
+PARAMETER top_k 40
+PARAMETER top_p 0.95
+PARAMETER num_ctx 131072
+#  context: 256K

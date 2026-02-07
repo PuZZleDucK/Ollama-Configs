@@ -853,31 +853,11 @@ TopK = 20
 [x] huihui_ai/qwen3-abliterated:16b
 huihui_ai-qwen3-abliterated-16b
 [x] huihui_ai/qwen3-abliterated:30b
-{
-    "repeat_penalty": 1,
-    "stop": [
-        "<|im_start|>",
-        "<|im_end|>"
-    ],
-    "temperature": 0.6,
-    "top_k": 20,
-    "top_p": 0.95
-}
 
 [x] goekdenizguelmez/JOSIEFIED-Qwen3:14b
 goekdenizguelmez-JOSIEFIED-Qwen3-14b
 [x] goekdenizguelmez/JOSIEFIED-Qwen3:30b
 goekdenizguelmez-JOSIEFIED-Qwen3-30b
-{
-    "repeat_penalty": 1,
-    "stop": [
-        "<|im_start|>",
-        "<|im_end|>"
-    ],
-    "temperature": 0.6,
-    "top_k": 20,
-    "top_p": 0.95
-}
 
 
 [x] granite4:micro
@@ -886,47 +866,14 @@ template?
 [x] granite4:small-h
 [X] granite4:tiny-h
 
-[ ] instruct: ollama run JollyLlama/GLM-4-32B-0414-Q4_K_M
-[ ] reasoning: ollama run JollyLlama/GLM-Z1-32B-0414-Q4_K_M
+[x] instruct: ollama run JollyLlama/GLM-4-32B-0414-Q4_K_M
+[x] reasoning: ollama run JollyLlama/GLM-Z1-32B-0414-Q4_K_M
 
 [ ] ollama run hf.co/TheBloke/MythoMax-L2-13B-GGUF:Q8_0
-MythoMax-L2-13B-GGUF-Q8_0
-temp 0.7 --repeat_penalty 1.1
-4096 to the desired sequence
-
-together.ai models to test:
-review docs test:
-- [ ] zai-org/GLM-4.5-Air-FP8
-- [ ] Qwen/QwQ-32B
-- [ ] mistralai/Magistral-Small-2506 - custom endpoint?
-- [ ] openai/gpt-oss-120b - api fail?
-- [ ] moonshotai/Kimi-K2-Instruct-0905 - searching - thrown off by mcps
-- [ ] deepseek-ai/DeepSeek-V3.1 - difficulties with provided tools
-- [ ] Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8
-- [ ] Qwen/Qwen3-235B-A22B-Thinking-2507 - multi file access - looking good - edit fails
-
-- [ ] cognitivecomputations/dolphin-2.5-mixtral-8x7b (32768)
-- [ ] databricks/dbrx-instruct (32768)
-- [ ] Qwen/Qwen2.5-72B-Instruct-Turbo
-- [ ] arcee-ai/maestro-reasoning
-- [ ] zero-one-ai/Yi-34B-Chat
-- [ ] databricks/dbrx-instruct
-- [ ] garage-bAInd/Platypus2-70B-instruct
-- [ ] togethercomputer/RedPajama-INCITE-Chat-3B-v1
-- [ ] togethercomputer/RedPajama-INCITE-7B-Chat
-- [ ] togethercomputer/StripedHyena-Nous-7B
-- [ ] black-forest-labs/FLUX.1-krea-dev
-
 
 [-] qwq quant/sloth/ablate
 
-
-
 [x] https://huggingface.co/allenai/Olmo-3-1125-32B
-hf.co/allenai/Olmo-3-1125-32B - nope
-unsloths:
-ollama run hf.co/unsloth/Olmo-3-32B-Think-GGUF:Q5_K_XL
-
 
 [x] qwen3-vl:30b
 [x] qwen3-vl:8b
@@ -947,116 +894,11 @@ ollama run hf.co/unsloth/Olmo-3-32B-Think-GGUF:Q5_K_XL
 [x] functiongemma:270m
 [x] nemotron-3-nano:30b
 
-[ ] glm-4.7-flash:q4_K_M - prerelease
-slug: glm-4-7-flash-q4_K_M
-https://ollama.com/library/glm-4.7-flash:q4_K_M
-context: 198K
-{
-    "temperature": 1
-}
 
-
-[ ] https://ollama.com/library/rnj-1
-slug: rnj-1
-Essential AI
-agentic capabilities
-rnj-1:8b
-context: 32K
-{
-    "stop": [
-        "<|start_header_id|>",
-        "<|end_header_id|>",
-        "<|eot_id|>"
-    ],
-    "temperature": 0.2
-}
-
-[ ] https://ollama.com/library/lfm2.5-thinking
-slug: lfm2-5-thinking
-Liquid AI
-lfm2.5-thinking:1.2b
-context: 125K
-{
-    "temperature": 0.05,
-    "top_k": 50
-}
-
-
-
-[ ] Dolphin 2.9.3 (Yi-1.5-34B-32k) — uncensored + function calling
-slug: dolphin-2-9-3-yi-1-5-34b-32k-q8_0
-HF: https://huggingface.co/dphn/dolphin-2.9.3-Yi-1.5-34B-32k
-Ollama: rjmalagon/dolphin-2.9.3-yi-1.5-34b-32k-q8_0
-
-- Maker: Eric Hartford / Cognitive Computations (dphn)
-- Base model: 01-ai/Yi-1.5-34B-32k
-- Weights: 34B parameters (Yi-34B class)
-- License: Apache-2.0
-- Context: base supports 32K; finetune trained with seq len 8192 (still generally used at 32K)
-- Prompt format: ChatML
-  - stop tokens to consider: <|im_end|> / <|im_start|>
-
-Recommended params (tool use / structured outputs):
-{
-    "temperature": 0.2,
-    "top_p": 0.9,
-    "num_ctx": 32768,
-    "stop": [
-        "<|im_end|>",
-        "<|im_start|>"
-    ]
-}
-
-
-[ ] Airoboros 33B 2.1 — function/args JSON/YAML friendly, mild de-alignment
-slug: Airoboros-33B-2-1-GGUF-Q4_K_M
-HF: hf.co/TheBloke/Airoboros-33B-2.1-GGUF:Q4_K_M
-GGUF: https://huggingface.co/TheBloke/Airoboros-33B-2.1-GGUF
-
-- Maker: Jon Durbin
-- Base model family: LLaMA 30B-class (repo name calls it “33B”)
-- License (per HF metadata): CC-BY-NC-4.0
-- Context: rope scaled to 4096 (author notes limited long-context data; YMMV)
-- Prompt format: "A chat. USER: {prompt} ASSISTANT:" (or newline variant)
-  - strongly recommended stop: "USER:" (prevents it roleplaying multi-turn chat forever)
-
-
-Recommended params (tool use / keep it on-rails):
-{
-    "temperature": 0.2,
-    "top_p": 0.9,
-    "num_ctx": 4096,
-    "repeat_penalty": 1.1,
-    "stop": [
-        "USER:"
-    ]
-}
-
-
-[ ] Qwen2.5-Coder-32B-Instruct (abliterated) — uncensored-ish + strong JSON (good for tools)
-slug: qwen2-5-coder-abliterate-32b
-HF: https://huggingface.co/huihui-ai/Qwen2.5-Coder-32B-Instruct-abliterated
-Base: https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct
-Ollama: huihui_ai/qwen2.5-coder-abliterate:32b
-
-- Maker: huihui-ai (abliteration), based on Alibaba Qwen2.5-Coder
-- Weights: 32.5B parameters (per base model card)
-- License: Apache-2.0
-- Context: base supports up to 131,072 tokens (and typically generates up to ~8192 tokens); model card notes config.json defaults to 32,768 and uses YaRN rope_scaling for longer contexts (Ollama builds may vary)
-
-Recommended params (tool use / JSON):
-{
-    "temperature": 0.1,
-    "top_p": 0.9,
-    "num_ctx": 32768
-}
-
-[ ] qwen3-coder-next
-qwen3-coder-next:q4_K_M
-context: 256K
-{
-    "temperature": 1,
-    "top_k": 40,
-    "top_p": 0.95
-}
-
+[x] glm-4.7-flash:q4_K_M - prerelease
+[x] https://ollama.com/library/rnj-1
+[x] https://ollama.com/library/lfm2.5-thinking
+[x] Dolphin 2.9.3 (Yi-1.5-34B-32k) — uncensored + function calling
+[x] Airoboros 33B 2.1 — function/args JSON/YAML friendly, mild de-alignment
+[x] Qwen2.5-Coder-32B-Instruct (abliterated) — uncensored-ish + strong JSON (good for tools)
+[x] qwen3-coder-next

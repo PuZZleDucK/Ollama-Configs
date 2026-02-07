@@ -1,0 +1,21 @@
+# ollama create config-qwen2-5-coder-abliterate-32b -f qwen2-5-coder-abliterate-32b.Modelfile
+# ollama create bb-config-qwen2-5-coder-abliterate-32b -f qwen2-5-coder-abliterate-32b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM huihui_ai/qwen2.5-coder-abliterate:32b
+# I am based on OpenAI's GPT-4, which is a state-of-the-art language model
+# Author: huihui-ai / Alibaba Qwen2.5-Coder
+# Size on disk: 
+# Size running: 
+#  - Weights: 32.5B parameters (per base model card)
+#  - License: Apache-2.0
+#  - Context: up to 131,072 tokens (typically generates ~8192 tokens)
+#  - config.json defaults to 32,768 and uses YaRN rope_scaling for longer
+# ollama show config-qwen2-5-coder-abliterate-32b && ollama run config-qwen2-5-coder-abliterate-32b "what llm model are you"
+#  architecture        qwen2     
+#  parameters          32.8B     
+#  context length      32768     
+#  embedding length    5120      
+#  quantization        Q4_K_M    
+
+PARAMETER temperature 0.1
+PARAMETER top_p 0.9
+PARAMETER num_ctx 32768

@@ -1,0 +1,22 @@
+# ollama create config-rnj-1 -f rnj-1.Modelfile
+# ollama create bb-config-rnj-1 -f rnj-1.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM rnj-1:8b
+# I am an AI assistant developed by Essential AI
+# Author: Essential AI
+# Size on disk: 
+# Size running: 
+#  agentic capabilities
+#  - obiedient but brief
+# ollama show config-rnj-1 && ollama run config-rnj-1 "what llm model are you"
+#  architecture        gemma3    
+#  parameters          8.3B      
+#  context length      32768     
+#  embedding length    4096      
+#  quantization        Q4_K_M    
+
+PARAMETER temperature 0.2
+PARAMETER num_ctx 131072
+#  context: 32K
+PARAMETER stop "<|start_header_id|>"
+PARAMETER stop "<|end_header_id|>"
+PARAMETER stop "<|eot_id|>"

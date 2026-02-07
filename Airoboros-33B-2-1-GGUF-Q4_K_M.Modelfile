@@ -1,0 +1,21 @@
+# ollama create config-Airoboros-33B-2-1-GGUF-Q4_K_M -f Airoboros-33B-2-1-GGUF-Q4_K_M.Modelfile
+# ollama create bb-config-Airoboros-33B-2-1-GGUF-Q4_K_M -f Airoboros-33B-2-1-GGUF-Q4_K_M.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM hf.co/TheBloke/Airoboros-33B-2.1-GGUF:Q4_K_M
+# using? - fail
+# Author: Jon Durbin - LLaMA 30B-class
+# Size on disk: 
+# Size running: 26 GB    84%/16% CPU/GPU
+#  - License (per HF metadata): CC-BY-NC-4.0
+#  - function/args JSON/YAML friendly, mild de-alignment
+# ollama show config-Airoboros-33B-2-1-GGUF-Q4_K_M && ollama run config-Airoboros-33B-2-1-GGUF-Q4_K_M "what llm model are you"
+#  architecture        llama     
+#  parameters          32.5B     
+#  context length      4096      
+#  embedding length    6656      
+#  quantization        Q4_K_M    
+
+PARAMETER temperature 0.2
+PARAMETER top_p 0.9
+PARAMETER num_ctx 4096
+PARAMETER repeat_penalty 1.1
+PARAMETER stop "USER:"
