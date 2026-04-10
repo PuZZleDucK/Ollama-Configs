@@ -1,0 +1,20 @@
+# ollama create config-nemotron-3-nano-30b -f nemotron-3-nano-30b.Modelfile
+# ollama create bb-config-nemotron-3-nano-30b -f nemotron-3-nano-30b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM nemotron-3-nano:30b
+# I am **Nemotron**, a family of **large language models (LLMs) developed by NVIDIA**. Specifically, I refer to the latest version in this series — **Nemotron-3-40B-Base**
+# Author: 
+# Size on disk: 
+# Size running: 29 GB    66%/34% CPU/GPU29 GB    66%/34% CPU/GPU
+# ollama show config-nemotron-3-nano-30b && ollama run config-nemotron-3-nano-30b "what llm model are you"
+#  architecture        nemotron_h_moe    
+#  parameters          31.6B             
+#  context length      1048576           
+#  embedding length    2688              
+#  quantization        Q4_K_M            
+
+#  Codex: reading file! - working great
+
+#  context: 1M
+PARAMETER num_ctx 131072
+PARAMETER temperature 1
+PARAMETER top_p 1

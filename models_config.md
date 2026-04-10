@@ -902,3 +902,111 @@ template?
 [x] Airoboros 33B 2.1 — function/args JSON/YAML friendly, mild de-alignment
 [x] Qwen2.5-Coder-32B-Instruct (abliterated) — uncensored-ish + strong JSON (good for tools)
 [x] qwen3-coder-next
+
+
+Models from dundee:
+NAME                                                              ID              SIZE      MODIFIED      
+qwen3:4b                                                          359d7dd4bcda    2.5 GB    3 months ago     
+gemma3:12b                                                        f4031aab637d    8.1 GB    4 months ago     
+gemma3:4b                                                         a2af6cc3eb7f    3.3 GB    4 months ago     
+granite4:micro                                                    4235724a127c    2.1 GB    4 months ago     
+gemma3:270m                                                       e7d36fb2c3b3    291 MB    4 months ago     
+gemma2:9b                                                         ff02c3702f32    5.4 GB    17 months ago    
+phi3:latest                                                       4f2222927938    2.2 GB    17 months ago    
+phi3:3.8b                                                         4f2222927938    2.2 GB    17 months ago    
+phi3:instruct                                                     4f2222927938    2.2 GB    17 months ago    
+phi3:mini                                                         4f2222927938    2.2 GB    17 months ago    
+llava-phi3:latest                                                 c7edd7b87593    2.9 GB    17 months ago    
+llava-phi3:3.8b-mini-q4_0                                         c7edd7b87593    2.9 GB    17 months ago    
+llava-phi3:3.8b-mini-fp16                                         39ed50ad5b22    8.3 GB    17 months ago    
+llava-llama3:latest                                               44c161b1f465    5.5 GB    17 months ago    
+llava-llama3:8b-v1.1-q4_0                                         44c161b1f465    5.5 GB    17 months ago    
+falcon2:latest                                                    d8c09dbc67c3    6.4 GB    17 months ago    
+llama3:text                                                       870a5d02cfaf    4.7 GB    17 months ago    
+llama3:instruct                                                   365c0bd3c000    4.7 GB    17 months ago    
+dbrx:132b-instruct-q2_K                                           e2554a95cc76    47 GB     17 months ago    
+llama3-gradient:latest                                            5d1398df5b8b    4.7 GB    17 months ago    
+llama3-gradient:instruct                                          5d1398df5b8b    4.7 GB    17 months ago    
+llama3-gradient:8b                                                5d1398df5b8b    4.7 GB    17 months ago    
+moondream:latest                                                  55fc3abd3867    1.7 GB    17 months ago    
+moondream:v2                                                      55fc3abd3867    1.7 GB    17 months ago    
+dolphin-llama3:latest                                             613f068e29f8    4.7 GB    17 months ago    
+dolphin-llama3:70b                                                39cf3e48a702    39 GB     17 months ago    
+dolphin-llama3:v2.9                                               613f068e29f8    4.7 GB    17 months ago    
+dolphin-mixtral:latest                                            cfada4ba31c7    26 GB     17 months ago    
+dolphin-phi:latest                                                c5761fc77240    1.6 GB    17 months ago    
+tinydolphin:latest                                                0f9dd11f824c    636 MB    17 months ago    
+tinydolphin:1.1b-v2.8-fp16                                        adb3e462abb8    2.2 GB    17 months ago    
+snowflake-arctic-embed:335m                                       21ab8b9b0545    669 MB    17 months ago    
+snowflake-arctic-embed:137m                                       12616299a158    274 MB    17 months ago    
+snowflake-arctic-embed:110m                                       8a0d86a3ca1d    218 MB    17 months ago    
+snowflake-arctic-embed:33m                                        e8db018629b4    67 MB     17 months ago    
+snowflake-arctic-embed:22m                                        bf75350e1752    45 MB     17 months ago    
+nomic-embed-text:latest                                           0a109f422b47    274 MB    17 months ago    
+mxbai-embed-large:latest                                          468836162de7    669 MB    17 months ago    
+dolphin-mistral:latest                                            5dc8c5a2be65    4.1 GB    17 months ago    
+codegemma:latest                                                  0c96700aaada    5.0 GB    17 months ago    
+codestral:latest                                                  fcc0019dcee9    12 GB     17 months ago    
+granite-code:20b                                                  31d8bc61e506    11 GB     17 months ago    
+granite-code:8b                                                   998bce918de0    4.6 GB    17 months ago    
+granite-code:3b                                                   63bedbdffbf0    2.0 GB    17 months ago    
+deepseek-coder:latest                                             3ddd2d3fc8d2    776 MB    17 months ago    
+starcoder2:latest                                                 f67ae0f64584    1.7 GB    17 months ago    
+starcoder2:15b                                                    20cdb0f709c2    9.1 GB    17 months ago    
+wizardcoder:python                                                de9d848c1323    3.8 GB    17 months ago    
+wizardcoder:33b-v1.1-q3_K_M                                       a10f6bc2ea74    16 GB     17 months ago    
+stable-code:latest                                                37681d29a55a    1.6 GB    17 months ago    
+dolphincoder:7b                                                   677555f1f316    4.2 GB    17 months ago    
+dolphincoder:15b                                                  1102380927c2    9.1 GB    17 months ago    
+qwen2:7b                                                          e0d4e1163c58    4.4 GB    17 months ago    
+command-r:35b-v0.1-q2_K                                           ebf190a244cd    13 GB     17 months ago    
+deepseek-coder-v2:latest                                          8577f96d693e    8.9 GB    17 months ago    
+deepseek-v2:latest                                                7c8c332f2df7    8.9 GB    17 months ago    
+gemma2:27b                                                        53261bc9c192    15 GB     17 months ago    
+llama3-groq-tool-use:latest                                       36211dad2b15    4.7 GB    17 months ago    
+mathstral:latest                                                  4ee7052be55a    4.1 GB    17 months ago    
+codegeex4:latest                                                  867b8e81d038    5.5 GB    17 months ago    
+internlm2:latest                                                  5050e36678ab    4.5 GB    17 months ago    
+llama3:latest                                                     365c0bd3c000    4.7 GB    17 months ago    
+llava-maid-7b-dpo.Q5_K_M.gguf:latest                              3bea4552819c    5.1 GB    17 months ago    
+ggml-model-f16.gguf:latest                                        02bffb368afe    14 GB     17 months ago    
+llava-v1.6-vicuna-7b.Q8_0.gguf:latest                             6783dc5fa001    7.2 GB    17 months ago    
+unsloth.Q4_K_M.gguf:latest                                        144f14d13abc    4.9 GB    17 months ago    
+llava-v1.5-7b-Q4_K.gguf:latest                                    e5ab7a836c31    4.1 GB    17 months ago    
+Llama-3.1-8B-Instruct-abliterated_via_adapter.Q8_0.gguf:latest    c78a183fadd9    8.5 GB    17 months ago    
+llama3.1:latest                                                   a23da2a80395    4.7 GB    18 months ago    
+adult-script-writer:latest                                        c971ea383d20    4.1 GB    20 months ago    
+dolphin-2.9-llama3-8b-q8_0.gguf:latest                            26e610f72900    8.5 GB    20 months ago    
+dolphin-2.5-mixtral-8x7b.Q2_K.gguf:latest                         cef1421426c3    15 GB     20 months ago    
+Fimbulvetr-11B-v2.q4_K_S.gguf:latest                              171dcd2b6d99    6.1 GB    20 months ago    
+Daredevil-8B-abliterated.Q8_0.gguf:latest                         fd0e137c8a86    8.5 GB    20 months ago    
+Smaug-Llama-3-70B-Instruct-IQ2_XXS.gguf:latest                    5b73c03fc1be    19 GB     20 months ago    
+unholy-v2-13b.Q4_K_S.gguf:latest                                  b6a690aec8a3    7.4 GB    20 months ago    
+u-amethyst-20b.Q3_K_L.gguf:latest                                 45d3ef263a85    10 GB     20 months ago    
+u-amethyst-20b.Q5_0.gguf:latest                                   3129965baf4e    13 GB     20 months ago    
+smaug-34b-v0.1.Q2_K.gguf:latest                                   52cf1b5aa832    12 GB     20 months ago    
+nous-hermes-2-mistral-7b-dpo.Q2_K.gguf:latest                     964b2decb382    2.7 GB    20 months ago    
+alphamonarch-7b.Q4_K_M.gguf:latest                                8b7fdccbd3b2    4.4 GB    20 months ago    
+stablebeluga2-70B.Q2_K.gguf:latest                                262d1539b91c    29 GB     20 months ago    
+alphamonarch-7b.Q8_0.gguf:latest                                  a332bec2ed06    7.7 GB    20 months ago    
+unholy-v2-13b.Q2_K.gguf:latest                                    17414560edc7    5.4 GB    20 months ago    
+unholy-v2-13b.Q8_0.gguf:latest                                    b135876824de    13 GB     20 months ago    
+yarn-mistral-7b-128k.Q5_K_M.gguf:latest                           e33fde8b7e89    5.1 GB    20 months ago    
+yarn-mistral-7b-128k.Q2_K.gguf:latest                             7808706ad31e    2.7 GB    20 months ago    
+neural-chat-7b-v3-16k-q8_0.gguf:latest                            3e9f89313f96    7.7 GB    20 months ago    
+nous-hermes-2-mistral-7b-dpo.Q4_K_M.gguf:latest                   c04052b097fe    4.4 GB    20 months ago    
+neural-chat-7b-v3-16k-f16.gguf:latest                             f6d4b7bf1c45    14 GB     20 months ago    
+DaringMaid-20B-V1.1-Q3_K_M.gguf:latest                            57c95716e57b    9.7 GB    20 months ago    
+dolphinhermes-120b.Q2_K.gguf:latest                               18a4e2acc316    44 GB     21 months ago    
+fimbulvetr.f16.gguf:latest                                        c6550f4dcb1a    21 GB     21 months ago    
+Kunoichi-7B.f16.gguf:latest                                       8b62894defae    14 GB     21 months ago    
+nous-hermes-2-mistral-7b-dpo.Q8_0.gguf:latest                     5a975b6094bf    7.7 GB    21 months ago    
+yarn-mistral-7b-128k.Q8_0.gguf:latest                             0d9ca2f32f65    7.7 GB    21 months ago    
+alphamonarch-7b.Q2_K.gguf:latest                                  c0c91e4cd098    2.7 GB    21 months ago    
+phi3:3.8b-mini-instruct-4k-fp16                                   157684aa81ad    7.6 GB    21 months ago    
+phi3:3.8b-mini-instruct-4k-q4_K_M                                 a2c89ceaed85    2.3 GB    21 months ago    
+
+
+
+
+

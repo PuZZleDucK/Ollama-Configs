@@ -1,0 +1,19 @@
+# created by: gpt-5.4-quine
+# ollama create config-lfm2-24b -f lfm2-24b.Modelfile
+# ollama create bb-config-lfm2-24b -f lfm2-24b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM lfm2:24b
+# 
+# Author: Liquid AI
+# Source: official Ollama library params + Dundee model metadata (2026-04-10)
+# Size on disk: 14.4 GB
+# Size running: 
+# ollama show config-lfm2-24b && ollama run config-lfm2-24b "what llm model are you"
+#  architecture        lfm2moe
+#  parameters          23.8B
+#  context length      32768
+#  quantization        Q4_K_M
+#  official params     temperature=0.3
+#  note                Official Ollama page only exposes temperature; full supported context is 32K.
+
+PARAMETER temperature 0.3
+PARAMETER num_ctx 32768

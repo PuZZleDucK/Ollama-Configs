@@ -1,3 +1,4 @@
+# survived 2026 q1 purge due to usage
 # ollama create config-GLM-Z1-32B-0414-Q4_K_M -f GLM-Z1-32B-0414-Q4_K_M.Modelfile
 # ollama create bb-config-GLM-Z1-32B-0414-Q4_K_M -f GLM-Z1-32B-0414-Q4_K_M.Modelfile --system "$(cat optional_system_prompt.md)"
 FROM JollyLlama/GLM-Z1-32B-0414-Q4_K_M

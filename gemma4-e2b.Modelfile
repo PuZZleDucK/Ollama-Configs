@@ -1,0 +1,21 @@
+# created by: gpt-5.4-quine
+# ollama create config-gemma4-e2b -f gemma4-e2b.Modelfile
+# ollama create bb-config-gemma4-e2b -f gemma4-e2b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM gemma4:e2b
+# 
+# Author: Google DeepMind
+# Source: official Ollama library params + Dundee model metadata (2026-04-10)
+# Size on disk: 7.2 GB
+# Size running: 
+# ollama show config-gemma4-e2b && ollama run config-gemma4-e2b "what llm model are you"
+#  architecture        gemma4
+#  parameters          5.1B
+#  context length      131072
+#  quantization        Q4_K_M
+#  official params     temperature=1, top_p=0.95, top_k=64
+#  note                Gemma 4 edge model; official best-practice sampling from Ollama library.
+
+PARAMETER temperature 1
+PARAMETER top_p 0.95
+PARAMETER top_k 64
+PARAMETER num_ctx 131072

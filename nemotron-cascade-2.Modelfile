@@ -1,0 +1,20 @@
+# created by: gpt-5.4-quine
+# ollama create config-nemotron-cascade-2 -f nemotron-cascade-2.Modelfile
+# ollama create bb-config-nemotron-cascade-2 -f nemotron-cascade-2.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM nemotron-cascade-2:latest
+# 
+# Author: NVIDIA
+# Source: official Ollama library params + Dundee model metadata (2026-04-10)
+# Size on disk: 24.3 GB
+# Size running: 
+# ollama show config-nemotron-cascade-2 && ollama run config-nemotron-cascade-2 "what llm model are you"
+#  architecture        nemotron_h_moe
+#  parameters          31.6B
+#  context length      262144
+#  quantization        Q4_K_M
+#  official params     temperature=1, top_p=0.95
+#  note                Official Ollama params plus a pragmatic default context cap.
+
+PARAMETER temperature 1
+PARAMETER top_p 0.95
+PARAMETER num_ctx 131072

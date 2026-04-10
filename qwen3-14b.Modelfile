@@ -1,3 +1,4 @@
+# survived 2026 q1 purge due to usage
 # ollama create config-qwen3-14b -f qwen3-14b.Modelfile
 # ollama create bb-config-qwen3-14b -f qwen3-14b.Modelfile --system "$(cat optional_system_prompt.md)"
 FROM qwen3:14b

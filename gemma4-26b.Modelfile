@@ -1,0 +1,21 @@
+# created by: gpt-5.4-quine
+# ollama create config-gemma4-26b -f gemma4-26b.Modelfile
+# ollama create bb-config-gemma4-26b -f gemma4-26b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM gemma4:26b
+# 
+# Author: Google DeepMind
+# Source: official Ollama library params + Dundee model metadata (2026-04-10)
+# Size on disk: 18.0 GB
+# Size running: 
+# ollama show config-gemma4-26b && ollama run config-gemma4-26b "what llm model are you"
+#  architecture        gemma4
+#  parameters          25.8B
+#  context length      262144
+#  quantization        Q4_K_M
+#  official params     temperature=1, top_p=0.95, top_k=64
+#  note                Gemma 4 medium/workstation model; default context capped below max for day-to-day use.
+
+PARAMETER temperature 1
+PARAMETER top_p 0.95
+PARAMETER top_k 64
+PARAMETER num_ctx 131072

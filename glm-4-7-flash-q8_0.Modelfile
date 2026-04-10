@@ -1,0 +1,19 @@
+# created by: gpt-5.4-quine
+# ollama create config-glm-4-7-flash-q8_0 -f glm-4-7-flash-q8_0.Modelfile
+# ollama create bb-config-glm-4-7-flash-q8_0 -f glm-4-7-flash-q8_0.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM glm-4.7-flash:q8_0
+# 
+# Author: Z.ai
+# Source: official Ollama library params + Dundee model metadata (2026-04-10)
+# Size on disk: 31.8 GB
+# Size running: 
+# ollama show config-glm-4-7-flash-q8_0 && ollama run config-glm-4-7-flash-q8_0 "what llm model are you"
+#  architecture        glm4moelite
+#  parameters          29.9B
+#  context length      202752
+#  quantization        Q8_0
+#  official params     temperature=1
+#  note                Official Ollama page only exposes temperature; context capped to 131072 for consistency with the Q4 config.
+
+PARAMETER temperature 1
+PARAMETER num_ctx 131072

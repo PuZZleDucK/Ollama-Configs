@@ -1,0 +1,19 @@
+# ollama create config-glm-4-7-flash-q4_K_M -f glm-4-7-flash-q4_K_M.Modelfile
+# ollama create bb-config-glm-4-7-flash-q4_K_M -f glm-4-7-flash-q4_K_M.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM glm-4.7-flash:q4_K_M
+# I am GLM, a large language model developed by Z.ai
+# Author: 
+# Size on disk: 
+# Size running: 33 GB    87%/13% CPU/GPU
+# ollama show config-glm-4-7-flash-q4_K_M && ollama run config-glm-4-7-flash-q4_K_M "what llm model are you"
+#  - thinking
+#  architecture        glm4moelite    
+#  parameters          29.9B          
+#  context length      202752         
+#  embedding length    2048           
+#  quantization        Q4_K_M         
+#  requires            0.15.0         
+
+PARAMETER temperature 1
+PARAMETER num_ctx 131072
+#  context: 198K

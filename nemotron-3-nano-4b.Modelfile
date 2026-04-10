@@ -1,0 +1,20 @@
+# created by: gpt-5.4-quine
+# ollama create config-nemotron-3-nano-4b -f nemotron-3-nano-4b.Modelfile
+# ollama create bb-config-nemotron-3-nano-4b -f nemotron-3-nano-4b.Modelfile --system "$(cat optional_system_prompt.md)"
+FROM nemotron-3-nano:4b
+# 
+# Author: NVIDIA
+# Source: official Ollama library params + Dundee model metadata (2026-04-10)
+# Size on disk: 2.8 GB
+# Size running: 
+# ollama show config-nemotron-3-nano-4b && ollama run config-nemotron-3-nano-4b "what llm model are you"
+#  architecture        nemotron_h
+#  parameters          4.0B
+#  context length      262144
+#  quantization        Q4_K_M
+#  official params     temperature=1, top_p=1
+#  note                Reasoning/non-reasoning hybrid; default context capped below max for practicality.
+
+PARAMETER temperature 1
+PARAMETER top_p 1
+PARAMETER num_ctx 131072
